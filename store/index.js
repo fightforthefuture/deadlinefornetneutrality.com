@@ -13,7 +13,8 @@ const createStore = () => {
       map: {
         zoom: null,
         currentPin: null
-      }
+      },
+      formStep: 1
     },
     mutations: {
       setModalVisibility(state, value) {
@@ -30,6 +31,10 @@ const createStore = () => {
 
       setMapCurrentPin(state, value) {
         state.map.currentPin = value
+      },
+
+      setFormStep(state, value) {
+        state.formStep = value
       }
     }
   })

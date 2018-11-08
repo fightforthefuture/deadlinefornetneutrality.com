@@ -1,6 +1,6 @@
 <template>
   <ul class="flex-center text-center">
-    <li class="sml-pad-x1">Help us spread the word:</li>
+    <li class="sml-pad-x1">Share on:</li>
     <li>
       <ShareButton
         network="twitter"

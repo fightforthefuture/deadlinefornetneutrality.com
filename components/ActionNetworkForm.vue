@@ -1,42 +1,10 @@
 <template>
   <div>
-    <div class="text-center sml-push-y2 med-push-y3">
-      <div v-if="hasSigned">
-        <p>
-          Thanks for signing the petition! Please consider sharing with your
-          friends and family.
-        </p>
-        <div class="row sml-push-y2 med-push-y3">
-          <div class="sml-c12 lrg-c4">
-            <ShareButton
-                network="twitter"
-                @click.native="$trackClick('twitter_share_button_success')"
-                class="btn-block">
-              <span>Tweet</span>
-            </ShareButton>
-          </div> <!-- .c -->
-          <div class="sml-c12 lrg-c4 sml-push-y1 lrg-push-y0">
-            <ShareButton
-                network="facebook"
-                @click.native="$trackClick('facebook_share_button_sucess')"
-                class="btn-block">
-              <span>Share</span>
-            </ShareButton>
-          </div> <!-- .c -->
-          <div class="sml-c12 lrg-c4 sml-push-y1 lrg-push-y0">
-            <a :href="donateUrl"
-               @click="$trackClick('donate_button_success')"
-               class="btn btn-block">
-              Donate
-            </a>
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div>
-      <p v-else>
-        Enter your information below to sign the petition.
-      </p>
-    </div> <!-- .push -->
-    <form @submit.prevent="submitForm()" v-if="!hasSigned"
+    <h2 class="text-center">
+      Enter your information below to sign the petition.
+    </h2>
+
+    <form @submit.prevent="submitForm()"
           class="sml-push-y2 med-push-y3">
       <p class="text-warn" v-if="errorMessage">{{ errorMessage }}</p>
       <div class="flex-row">
@@ -45,8 +13,10 @@
       </div> <!-- .flex-row -->
       <div class="flex-row sml-push-y2">
         <input v-model="address" type="text" placeholder="Address"
-               class="sml-flex-4">
+               class="sml-flex-2">
         <input v-model="zipCode" type="tel" placeholder="ZIP Code">
+        <input v-model="phone" type="tel" placeholder="Phone #"
+               class="sml-flex-2">
       </div> <!-- .flex-row -->
 
       <button class="btn btn-block sml-push-y2 med-push-y3" :disabled="isSending">
@@ -74,28 +44,19 @@
 <script>
 import axios from 'axios'
 import { sendToMothership } from '~/assets/js/helpers'
-import ShareButton from '~/components/ShareButton'
 
 export default {
-  components: {
-    ShareButton
-  },
-
   data() {
     return {
       isSending: false,
-      hasSigned: false,
       errorMessage: null,
       // form fields
       name: null,
       email: null,
       address: null,
-      zipCode: null
+      zipCode: null,
+      phone: null
     }
-  },
-
-  computed: {
-    donateUrl () { return this.$store.state.donateUrl }
   },
 
   methods: {
@@ -112,6 +73,7 @@ export default {
             email: this.email,
             street_address: this.address,
             postcode: this.zipCode,
+            phone: this.phone,
             country: 'US'
           },
           hp_enabled: 'true',
@@ -125,7 +87,7 @@ export default {
 
         this.$trackEvent('petition_form', 'submit')
         this.isSending = false
-        this.hasSigned = true
+        this.$store.commit('setFormStep', 2)
       }
       catch (err) {
         this.isSending = false

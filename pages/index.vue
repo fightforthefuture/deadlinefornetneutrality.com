@@ -4,7 +4,7 @@
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h1>Your title goes here</h1>
+            <h1>Dear Congress</h1>
             <p class="sml-push-y2 med-push-y3">
               Sub heading goes here, lorem ipsum dolor sit amet, consectetur
               adipiscing elit. In nibh libero, venenatis sed justo eu,
@@ -12,29 +12,17 @@
               id ultricies velit laoreet in. Vestibulum sit amet ante vel risus
               ornare ultrices sed id leo.
             </p>
-            <a class="btn btn-block sml-push-y2 med-push-y3" href="#TODO">
-              Call to action
-            </a>
+
+            <div class="sml-push-y2 med-push-y3 sml-pad-2 med-pad-4 with-border is-rounded">
+              <ActionNetworkForm v-if="formStep === 1"/>
+              <SelfieForm v-if="formStep === 2"/>
+              <FormComplete v-if="formStep === 3"/>
+            </div> <!-- .pad -->
 
             <ul class="hoz sml-push-y2 med-push-y3">
               <li>
-                <a @click.prevent="scrollTo('#sign')">
-                  Sign the petition
-                </a>
-              </li>
-              <li>
                 <a @click.prevent="scrollTo('#letter')">
                   Read the Letter
-                </a>
-              </li>
-              <li>
-                <a @click.prevent="scrollTo('#print')">
-                  Print the Letter
-                </a>
-              </li>
-              <li>
-                <a @click.prevent="scrollTo('#quotes')">
-                  Quotes
                 </a>
               </li>
             </ul>
@@ -43,18 +31,8 @@
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="sign" class="sml-pad-y3 med-pad-y6 fill-grey-light">
-      <div class="wrapper">
-        <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Sign the petition</h2>
-            <ActionNetworkForm/>
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
 
-    <section id="letter" class="sml-pad-y3 med-pad-y6">
+    <section id="letter" class="sml-pad-y3 med-pad-y6 fill-grey-light">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center">
@@ -64,29 +42,7 @@
       </div> <!-- .wrapper -->
     </section>
 
-
-    <section id="print" class="sml-pad-y3 med-pad-y6 fill-grey-light">
-      <div class="wrapper">
-        <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
-            <PrintTheLetter/>
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
-
-    <section id="quotes" class="sml-pad-y3 med-pad-y6">
-      <div class="wrapper">
-        <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Quotes</h2>
-            <QuoteScroller class="sml-push-y2 med-push-y3" />
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
-
-    <section id="logos" class="sml-pad-y3 med-pad-y6 fill-grey-light">
+    <section id="logos" class="sml-pad-y3 med-pad-y6">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
@@ -97,20 +53,6 @@
         </div> <!-- .row -->
       </div> <!-- .wrapper -->
     </section>
-
-    <section id="map" class="sml-pad-y3 med-pad-y6">
-      <div class="wrapper">
-        <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Map</h2>
-
-            <Map :events="events" class="sml-push-y2 med-push-y3" />
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
-
-    <SocialSidebar />
   </div>
 </template>
 
@@ -119,22 +61,18 @@ import axios from 'axios'
 import config from '~/config'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
 import ActionNetworkForm from '~/components/ActionNetworkForm'
-import QuoteScroller from '~/components/QuoteScroller'
+import SelfieForm from '~/components/SelfieForm'
+import FormComplete from '~/components/FormComplete'
 import ReadTheLetter from '~/components/ReadTheLetter'
-import PrintTheLetter from '~/components/PrintTheLetter'
 import LogoCloud from '~/components/LogoCloud'
-import Map from '~/components/Map'
-import SocialSidebar from '~/components/SocialSidebar'
 
 export default {
   components: {
     ActionNetworkForm,
-    QuoteScroller,
+    SelfieForm,
+    FormComplete,
     ReadTheLetter,
-    PrintTheLetter,
-    LogoCloud,
-    Map,
-    SocialSidebar
+    LogoCloud
   },
 
   head() {
@@ -149,29 +87,8 @@ export default {
     }
   },
 
-  async asyncData() {
-    let events = []
-    try {
-      const { data } = await axios.get('https://data.battleforthenet.com/events.json')
-
-      events = data.filter(e => e.category === 'facebook_group').sort((a, b) => {
-        if (a.address < b.address) {
-          return -1
-        }
-        else if (a.address > b.address) {
-          return 1
-        }
-        else {
-          return 0
-        }
-      })
-    }
-    catch (error) {
-      //
-    }
-    return {
-      events: events
-    }
+  computed: {
+    formStep () { return this.$store.state.formStep }
   },
 
   methods: {
