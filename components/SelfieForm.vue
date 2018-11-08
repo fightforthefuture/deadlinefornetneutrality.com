@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="text-center">
-      Thanks for signing the petition!<br>
+      Thanks for signing the letter!<br>
       Take a selfie to share in our gallery
     </h2>
 
