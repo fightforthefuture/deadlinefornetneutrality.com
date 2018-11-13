@@ -4,13 +4,13 @@
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h1>Dear Congress</h1>
+            <h3>12 Days 13 Hours 09 Minutes 32 Seconds</h3>
+            <h1 class="sml-push-y2 med-push-y3">
+              Congress, time is running out to save the internet
+            </h1>
             <p class="sml-push-y2 med-push-y3">
-              Sub heading goes here, lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. In nibh libero, venenatis sed justo eu,
-              sollicitudin sollicitudin nisi. Integer semper tortor orci,
-              id ultricies velit laoreet in. Vestibulum sit amet ante vel risus
-              ornare ultrices sed id leo.
+              The future of humanity is counting on you.
+              Please vote before it&rsquo;s too late.
             </p>
 
             <div class="sml-push-y2 med-push-y3 sml-pad-2 med-pad-4 with-border is-rounded">
@@ -32,7 +32,7 @@
     </section>
 
 
-    <section id="letter" class="sml-pad-y3 med-pad-y6 fill-grey-light">
+    <section id="letter" class="sml-pad-y3 med-pad-y6 fill-white">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center">
