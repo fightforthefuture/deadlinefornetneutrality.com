@@ -1,6 +1,11 @@
 <template>
   <div>
-    <section class="sml-pad-y3 med-pad-y6">
+    <video autoplay>
+      <source src="~assets/videos/earth.mp4" type="video/mp4">
+      Sorry, your browser does not support HTML5 video
+    </video>
+
+    <section>
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
@@ -31,8 +36,7 @@
       </div> <!-- .wrapper -->
     </section>
 
-
-    <section id="letter" class="sml-pad-y3 med-pad-y6 fill-white">
+    <section id="letter" class="sml-push-y3 med-push-y6 sml-pad-y3 med-pad-y6 fill-white">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center">
