@@ -10,6 +10,7 @@ const createStore = () => {
       modalVisible: false,
       modalType: null,
       mapboxToken: config.mapboxToken,
+      countdownEndDateTime: config.countdownEndDateTime,
       map: {
         zoom: null,
         currentPin: null

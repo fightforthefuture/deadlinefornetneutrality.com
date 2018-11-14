@@ -1,6 +1,7 @@
 <template>
   <div>
-    <video autoplay loop muted class="sml-hide lrg-show" poster="/earth-poster.png">
+    <video autoplay loop muted class="sml-hide lrg-show fade-in"
+           poster="/earth-poster.png">
       <source src="~assets/videos/earth.mp4" type="video/mp4">
     </video>
     <img src="/earth-poster.png" alt="earth" class="lrg-hide" />
@@ -9,7 +10,7 @@
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h6>12 Days 13 Hours 09 Minutes 32 Seconds</h6>
+            <Countdown/>
             <h1 class="sml-push-y2 med-push-y3">
               Congress, time is running out to save the internet
             </h1>
@@ -113,6 +114,7 @@
 import axios from 'axios'
 import config from '~/config'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
+import Countdown from '~/components/Countdown'
 import ActionNetworkForm from '~/components/ActionNetworkForm'
 import SelfieForm from '~/components/SelfieForm'
 import FormComplete from '~/components/FormComplete'
@@ -121,6 +123,7 @@ import LogoCloud from '~/components/LogoCloud'
 
 export default {
   components: {
+    Countdown,
     ActionNetworkForm,
     SelfieForm,
     FormComplete,
