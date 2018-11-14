@@ -1,21 +1,49 @@
 /// Buttons
 
+// Button > Animation
+// NOTE: this mixin is a workaround because CSS animations can't be restarted
+$step: 6%;
+@mixin button-gradient-animation {
+  @for $i from 0 through 10 {
+    #{$i*10%} {
+      background: linear-gradient(
+        #{150 - ($i*6)}deg,
+        #{$gradient-purple-color} 0%,
+        #{$gradient-purple-color} #{$i*$step},
+        #{$gradient-blue-color} 100%
+      );
+    }
+  }
+}
+
+@keyframes cta-hover {
+  @include button-gradient-animation;
+}
+@keyframes cta-mouseout {
+  @include button-gradient-animation;
+}
+
 // Button > Default
 .btn {
-  // TODO: update style
   display: inline-block;
   padding: $gutter/2 $gutter*2 ($gutter/2 + 2);
   overflow: hidden;
-  background: $brand-color;
+  animation: cta-mouseout .2s;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  background-color: $gradient-purple-color;
+  background-image: $default-gradient;
   border: none;
   border-radius: $default-border-radius;
   color: $white;
   cursor: pointer;
+  font-family: $heading-stack;
   font-size:  $m-font-size-2;
   font-weight: $bold-font-weight;
   outline: none;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
     -moz-user-select:    none;
     -webkit-user-select: none;
   user-select:           none;
@@ -29,7 +57,10 @@
 }
 .btn:hover,
 .btn:focus {
-  background: $brand-dark-color;
+  animation: cta-hover .2s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  background: $gradient-blue-color;
   border: none;
 }
 button.btn {

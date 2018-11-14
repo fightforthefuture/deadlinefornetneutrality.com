@@ -1,21 +1,11 @@
 // Page Footer
 
 .page-footer {
-  background: $grey-light-color;
+  background-color: $gradient-purple-color;
+  background-image: $default-gradient;
 }
-.page-footer .contact-block {
-  position: relative;
-  background: $grey-color;
-}
-.page-footer .contact-block:before {
-  display: block;
-  content: '';
-  height: 0;
-  width: 0;
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  margin-left: -10px;
-  border: 20px solid transparent;
-  border-bottom-color: $grey-color;
+.page-footer a {
+  border-color: $white;
+  color: $white;
+  font-weight: $bold-font-weight;
 }

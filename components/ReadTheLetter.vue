@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="text-center">Read the Letter</h2>
-    <div v-html="letterText" class="sml-push-y2 med-push-y3"></div>
+    <div v-html="letterText" class="sml-push-y2 med-push-y3 text-serif"></div>
   </div>
 </template>
 
