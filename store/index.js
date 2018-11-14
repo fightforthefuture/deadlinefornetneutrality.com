@@ -14,7 +14,18 @@ const createStore = () => {
         zoom: null,
         currentPin: null
       },
-      formStep: 1
+      formStep: 1,
+
+      // form fields
+      name: null,
+      email: null,
+      address: null,
+      zipCode: null,
+      phone: null,
+
+      // selfie form
+      photoSource: null,
+      selfie: {}
     },
     mutations: {
       setModalVisibility(state, value) {
@@ -35,6 +46,34 @@ const createStore = () => {
 
       setFormStep(state, value) {
         state.formStep = value
+      },
+
+      setName(state, value) {
+        state.name = value
+      },
+
+      setEmail(state, value) {
+        state.email = value
+      },
+
+      setAddress(state, value) {
+        state.address = value
+      },
+
+      setZipCode(state, value) {
+        state.zipCode = value
+      },
+
+      setPhone(state, value) {
+        state.phone = value
+      },
+
+      setPhotoSource(state, value) {
+        state.photoSource = value
+      },
+
+      setSelfie(state, value) {
+        state.selfie = value
       }
     }
   })
