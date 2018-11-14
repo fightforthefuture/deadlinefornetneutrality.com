@@ -111,6 +111,7 @@ const createStore = () => {
         }
 
         try {
+          // TODO: Update date source!
           const { data } = await axios.get(`https://data.battleforthenet.com/vfnn/selfies${q}.json`)
           if (query && query.page > 1) {
             commit('addSelfies', data)

@@ -34,16 +34,8 @@
         <div class="row">
           <div class="sml-c12 lrg-c10 grid-center text-center">
             <h3>Recent signers:</h3>
-            <div class="flex-row sml-push-y1 med-push-y2">
-              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
-              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
-              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
-              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
-              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
-              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
-              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
-              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
-            </div> <!-- .flex-row -->
+            <SelfiePreview/>
+
             <p class="sml-push-y1 med-push-y2">
               <nuxt-link to="/selfies">View all</nuxt-link>
             </p>
@@ -118,6 +110,7 @@ import Countdown from '~/components/Countdown'
 import ActionNetworkForm from '~/components/ActionNetworkForm'
 import SelfieForm from '~/components/SelfieForm'
 import FormComplete from '~/components/FormComplete'
+import SelfiePreview from '~/components/SelfiePreview'
 import ReadTheLetter from '~/components/ReadTheLetter'
 import LogoCloud from '~/components/LogoCloud'
 
@@ -127,6 +120,7 @@ export default {
     ActionNetworkForm,
     SelfieForm,
     FormComplete,
+    SelfiePreview,
     ReadTheLetter,
     LogoCloud
   },

@@ -3,7 +3,7 @@
     <div class="selfie-wrapper">
       <img v-if="selfie.photo"
            :src="selfie.photo"
-           :alt="`Voter: ${selfie.name}`"
+           :alt="`${selfie.name}`"
            class="grid-center"/>
       <div v-if="selfie.first_time_voter"
            class="is-first-time-voter">
