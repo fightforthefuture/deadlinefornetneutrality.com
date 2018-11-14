@@ -14,10 +14,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
   font-size: $m-font-size-1;
-  line-height: 1.2;
+  line-height: 1;
 
   @include respond-to(med) {
     font-size: $font-size-1;
+    line-height: 0.8;
   }
 }
 h2 {
@@ -26,6 +27,14 @@ h2 {
 
   @include respond-to(med) {
     font-size: $font-size-2;
+  }
+}
+h3 {
+  font-size: $m-font-size-3;
+  line-height: 1.3;
+
+  @include respond-to(med) {
+    font-size: $font-size-3;
   }
 }
 
@@ -64,6 +73,9 @@ small {
 .text-white {
   color: $white;
 }
+.text-meta {
+  color: $grey-light-color;
+}
 .text-brand {
   color: $brand-color;
 }
@@ -78,18 +90,20 @@ small {
 // Typography > Links
 a,
 button,
-input[type=submit] {
+input[type=submit],
+.faux-link {
   transition: $default-transition;
 }
-a {
-  // TODO: revisit this style
+a,
+.faux-link {
   color: $brand-color;
-  border-bottom: 1px solid transparent;
-  text-decoration: none;
+  text-decoration: underline;
 }
 a:hover,
 a:focus,
 button:hover,
-button:focus {
-  border-bottom: 1px solid $brand-color;
+button:focus,
+.faux-link:hover,
+.faux-link:focus {
+  color: $brand-dark-color;
 }

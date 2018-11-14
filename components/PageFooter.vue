@@ -1,5 +1,5 @@
 <template>
-  <div class="page-footer text-center">
+  <div class="page-footer text-center sml-push-y4 med-push-y8">
     <div class="sml-pad-y4">
       <div class="wrapper">
         <h3>Built by:</h3>

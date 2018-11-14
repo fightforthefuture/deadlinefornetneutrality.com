@@ -1,11 +1,6 @@
 <template>
   <div>
-    <h2 class="text-center">
-      Enter your information below to sign the petition.
-    </h2>
-
-    <form @submit.prevent="submitForm()"
-          class="sml-push-y2 med-push-y3">
+    <form @submit.prevent="submitForm()">
       <p class="text-warn" v-if="errorMessage">{{ errorMessage }}</p>
       <div class="flex-row">
         <input v-model="name" type="text" placeholder="Name*" required>
@@ -19,7 +14,7 @@
                class="sml-flex-2">
       </div> <!-- .flex-row -->
 
-      <button class="btn btn-block sml-push-y2 med-push-y3" :disabled="isSending">
+      <button class="btn btn-block sml-push-y2" :disabled="isSending">
         <span v-if="isSending">
           Sending...
         </span>
@@ -27,7 +22,7 @@
           Take action
         </span>
       </button>
-      <p class="sml-push-y1"><small>
+      <p class="sml-push-y2 text-meta"><small>
         <a href="https://www.fightforthefuture.org/" target="_blank">
           Fight for the Future</a>
         will email you updates, and you can unsubscribe at any time. If

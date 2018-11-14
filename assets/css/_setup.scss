@@ -5,9 +5,9 @@
 // Colors
 $white:              #FFF;
 $black:              #000;
-$grey-light-color:   #CCC;
+$grey-light-color:   #7C679A; // light purple
 $grey-color:         #999;
-$grey-dark-color:    #10071D;
+$grey-dark-color:    #10071D; // dark purple
 $brand-color:        #307EFF;
 $brand-dark-color:   darken($brand-color, 10%);
 $background-color:   $grey-dark-color;
@@ -38,15 +38,16 @@ $base-font-weight: normal;
 $bold-font-weight: bold;
 $base-line-height: 1.6;
 
-$font-size-1: 36px;
-$font-size-2: 24px;
-// $font-size-3: 18px;
+$font-size-1: 62px;
+$font-size-2: 40px;
+$font-size-3: 24px;
 // $font-size-4: $base-font-size;
 // $font-size-5: 14px;
 $font-size-6: 12px;
 
-$m-font-size-1: 24px;
-$m-font-size-2: 18px;
+$m-font-size-1: 30px;
+$m-font-size-2: 22px;
+$m-font-size-3: 18px;
 $m-font-size-6: 10px;
 
 // Layout
