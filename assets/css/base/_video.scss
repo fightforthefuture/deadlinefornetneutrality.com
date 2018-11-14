@@ -1,0 +1,19 @@
+/// Video
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+video {
+  display: block;
+  width: 100%;
+  animation: fade-in 3s;
+  animation-fill-mode: forwards;
+  object-fit: cover;
+  opacity: 0;
+}

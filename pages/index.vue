@@ -1,6 +1,11 @@
 <template>
   <div>
-    <section class="sml-push-y4 med-push-y8">
+    <video autoplay loop muted class="sml-hide lrg-show" poster="/earth-poster.png">
+      <source src="~assets/videos/earth.mp4" type="video/mp4">
+    </video>
+    <img src="/earth-poster.png" alt="earth" class="lrg-hide" />
+
+    <section id="intro">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
@@ -45,7 +50,6 @@
         </div> <!-- .row -->
       </div> <!-- .wrapper -->
     </section>
-
 
     <section id="letter" class="sml-push-y3 med-push-y6">
       <div class="wrapper">

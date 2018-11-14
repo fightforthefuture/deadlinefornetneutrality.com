@@ -68,6 +68,7 @@
   }
 }
 .sml-c12 {
+  display: block;
   width: 100%;
 }
 .sml-no-pad {
@@ -88,6 +89,7 @@
     }
   }
   .med-c12 {
+    display: block;
     width: 100%;
   }
   .med-no-pad {
@@ -135,11 +137,6 @@
 .lrg-pull-right {
   @include respond-to(lrg) {
     float: right;
-  }
-}
-.med-hide {
-  @include respond-to-max(med) {
-    display: none;
   }
 }
 
@@ -194,5 +191,33 @@
     .lrg-flex-#{$i} {
       flex: $i;
     }
+  }
+}
+
+// Visibility
+
+.sml-hide {
+  @include respond-to(sml) {
+    display: none;
+  }
+}
+.med-hide {
+  @include respond-to(med) {
+    display: none;
+  }
+}
+.lrg-hide {
+  @include respond-to(lrg) {
+    display: none;
+  }
+}
+.med-show {
+  @include respond-to(med) {
+    display: block;
+  }
+}
+.lrg-show {
+  @include respond-to(lrg) {
+    display: block;
   }
 }
