@@ -4,7 +4,7 @@
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h3>12 Days 13 Hours 09 Minutes 32 Seconds</h3>
+            <h6>12 Days 13 Hours 09 Minutes 32 Seconds</h6>
             <h1 class="sml-push-y2 med-push-y3">
               Congress, time is running out to save the internet
             </h1>
