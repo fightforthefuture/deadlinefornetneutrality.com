@@ -32,11 +32,13 @@
     </section>
 
 
-    <section id="letter" class="sml-pad-y3 med-pad-y6 fill-white">
+    <section id="letter" class="sml-push-y3 med-push-y6">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center">
-            <ReadTheLetter/>
+            <div class="fill-white sml-pad-2 med-pad-4 sml-pad-y3 med-pad-y6">
+              <ReadTheLetter/>
+            </div>
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .wrapper -->
