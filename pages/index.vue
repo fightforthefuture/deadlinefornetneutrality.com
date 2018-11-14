@@ -51,9 +51,9 @@
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="letter" class="sml-push-y3 med-push-y6">
+    <section id="letter">
       <div class="wrapper">
-        <div class="row">
+        <div class="row sml-pad-y3 med-push-y6">
           <div class="sml-c12 lrg-c10 grid-center">
             <ReadTheLetter/>
           </div> <!-- .c -->
