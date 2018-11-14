@@ -1,11 +1,29 @@
+<style lang="scss" scoped>
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.earth {
+  object-fit: cover;
+  width: 100%;
+  opacity: 0;
+  animation: fade-in 3s;
+  animation-fill-mode: forwards;
+}
+</style>
+
 <template>
   <div>
-    <video autoplay loop>
+    <video autoplay loop muted class="earth" poster="/earth-poster.png">
       <source src="~assets/videos/earth.mp4" type="video/mp4">
-      Sorry, your browser does not support HTML5 video
     </video>
 
-    <section>
+    <section id="intro">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
@@ -88,6 +106,12 @@ export default {
         image: config.sharing.image,
         url: config.sharing.url
       })
+    }
+  },
+
+  data() {
+    return {
+      videoLoaded: false
     }
   },
 
