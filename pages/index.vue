@@ -1,16 +1,21 @@
 <template>
   <div>
-    <section class="sml-pad-y3 med-pad-y6">
+    <video autoplay loop muted class="sml-hide lrg-show" poster="/earth-poster.png">
+      <source src="~assets/videos/earth.mp4" type="video/mp4">
+    </video>
+    <img src="/earth-poster.png" alt="earth" class="lrg-hide" />
+
+    <section id="intro">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h3>12 Days 13 Hours 09 Minutes 32 Seconds</h3>
+            <h6>12 Days 13 Hours 09 Minutes 32 Seconds</h6>
             <h1 class="sml-push-y2 med-push-y3">
               Congress, time is running out to save the internet
             </h1>
             <p class="sml-push-y2 med-push-y3">
-              The future of humanity is counting on you.
-              Please vote before it&rsquo;s too late.
+              We&rsquo;re days away from the deadline. Tell your elected
+              officials: &ldquo;vote to save net neutrality.&rdquo;
             </p>
 
             <div class="sml-push-y2 med-push-y3 sml-pad-2 med-pad-4 with-border is-rounded">
@@ -18,37 +23,85 @@
               <SelfieForm v-if="formStep === 2"/>
               <FormComplete v-if="formStep === 3"/>
             </div> <!-- .pad -->
-
-            <ul class="hoz sml-push-y2 med-push-y3">
-              <li>
-                <a @click.prevent="scrollTo('#letter')">
-                  Read the Letter
-                </a>
-              </li>
-            </ul>
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .wrapper -->
     </section>
 
-
-    <section id="letter" class="sml-pad-y3 med-pad-y6 fill-white">
+    <section id="signers" class="sml-push-y2 med-push-y4">
       <div class="wrapper">
         <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center">
+          <div class="sml-c12 lrg-c10 grid-center text-center">
+            <h3>Recent signers:</h3>
+            <div class="flex-row sml-push-y1 med-push-y2">
+              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
+              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
+              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
+              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
+              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
+              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
+              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
+              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
+            </div> <!-- .flex-row -->
+            <p class="sml-push-y1 med-push-y2">
+              <nuxt-link to="/">View all</nuxt-link>
+            </p>
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+      </div> <!-- .wrapper -->
+    </section>
+
+    <section id="letter" class="sml-push-y3 med-push-y6">
+      <div class="wrapper">
+        <div class="row">
+          <div class="sml-c12 lrg-c10 grid-center">
             <ReadTheLetter/>
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="logos" class="sml-pad-y3 med-pad-y6">
+    <section id="events" class="sml-push-y4 med-push-y8">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Logo Cloud</h2>
+            <h2>Join the nationwide protests</h2>
+            <p class="sml-push-y2 med-push-y3">
+              Want to make your voice heard? Check out the map below to find a
+              protest or a meeting with a representative in your state. And if
+              there are no events in your area, consider organizing one!
+            </p>
+            <a href="https://www.battleforthenet.com/map/" target="_blank">
+              <img src="https://data.battleforthenet.com/events.png"
+                   alt="A map of net neutrality protests"
+                   class="is-rounded sml-push-y2 med-push-y3">
+              <p class="sml-push-y2 med-push-y3">
+                <span class="faux-link">View full map</span>
+              </p>
+            </a>
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+      </div> <!-- .wrapper -->
+    </section>
 
-            <LogoCloud class="sml-push-y2 med-push-y3"/>
+    <section id="day-of-action" class="sml-push-y4 med-push-y8">
+      <div class="wrapper">
+        <div class="row">
+          <div class="sml-c12 lrg-c8 grid-center text-center">
+            <h2>Join our Day of Action on Nov 28</h2>
+            <p class="sml-push-y2 med-push-y3">
+              We&rsquo;re planning an epic, final push to save net neutrality on
+              November 28th, and we need your help to get as many people as
+              possible to pressure members of Congress. December 10th is the
+              final day for lawmakers to file the CRA discharge petition to
+              force a House vote on overturning the FCC. So we&rsquo;re bringing
+              the entire Internet together for one last day of action to make
+              sure they do the right thing. Do you run a site or blog? Are you
+              active on social media? Put your small piece of the Internet on
+              alert with these banner ads and social media images.
+              <a href="#TODO">Click here</a> to see ideas for blog posts,
+              emails, tweets and more.
+            </p>
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .wrapper -->

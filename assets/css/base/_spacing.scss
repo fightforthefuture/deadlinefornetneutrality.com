@@ -1,20 +1,20 @@
 /// Spacing
 
 // Spacing > Padding
-@each $i in 1, 2, 3, 4, 5, 6 {
+@each $i in 1, 2, 3, 4, 5, 6, 7, 8 {
   .sml-pad-#{$i} {
     padding: $gutter * ($i);
   }
 }
 @include respond-to(med) {
-  @each $i in 0, 1, 2, 3, 4, 5, 6 {
+  @each $i in 0, 1, 2, 3, 4, 5, 6, 7, 8 {
     .med-pad-#{$i} {
       padding: $gutter * ($i);
     }
   }
 }
 @include respond-to(lrg) {
-  @each $i in 0, 1, 2, 3, 4, 5, 6 {
+  @each $i in 0, 1, 2, 3, 4, 5, 6, 7, 8 {
     .lrg-pad-#{$i} {
       padding: $gutter * ($i);
     }
@@ -24,14 +24,14 @@
 // Spacing > Padding-X
 // NOTE: Use anything except .*-pad-x1 very sparingly.
 // X units beyonf 1 will not be aligned with the grid.
-@each $i in 1, 2, 3, 4, 5, 6 {
+@each $i in 1, 2, 3, 4, 5, 6, 7, 8 {
   .sml-pad-x#{$i} {
     padding-left:  $gutter * ($i);
     padding-right: $gutter * ($i);
   }
 }
 @include respond-to(med) {
-  @each $i in 0, 1, 2, 3, 4, 5, 6 {
+  @each $i in 0, 1, 2, 3, 4, 5, 6, 7, 8 {
     .med-pad-x#{$i} {
       padding-left:  $gutter * ($i);
       padding-right: $gutter * ($i);
@@ -39,7 +39,7 @@
   }
 }
 @include respond-to(lrg) {
-  @each $i in 0, 1, 2, 3, 4, 5, 6 {
+  @each $i in 0, 1, 2, 3, 4, 5, 6, 7, 8 {
     .lrg-pad-x#{$i} {
       padding-left:  $gutter * ($i);
       padding-right: $gutter * ($i);
@@ -48,14 +48,14 @@
 }
 
 // Spacing > Padding-Y
-@each $i in 1, 2, 3, 4, 5, 6 {
+@each $i in 1, 2, 3, 4, 5, 6, 7, 8 {
   .sml-pad-y#{$i} {
     padding-top:    $gutter * ($i);
     padding-bottom: $gutter * ($i);
   }
 }
 @include respond-to(med) {
-  @each $i in 0, 1, 2, 3, 4, 5, 6 {
+  @each $i in 0, 1, 2, 3, 4, 5, 6, 7, 8 {
     .med-pad-y#{$i} {
       padding-top:    $gutter * ($i);
       padding-bottom: $gutter * ($i);
@@ -63,7 +63,7 @@
   }
 }
 @include respond-to(lrg) {
-  @each $i in 0, 1, 2, 3, 4, 5, 6 {
+  @each $i in 0, 1, 2, 3, 4, 5, 6, 7, 8 {
     .lrg-pad-y#{$i} {
       padding-top:    $gutter * ($i);
       padding-bottom: $gutter * ($i);
@@ -75,7 +75,7 @@
 .sml-push-y-half {
   margin-top: $gutter/2;
 }
-@each $i in 1, 2, 3, 4, 5, 6 {
+@each $i in 1, 2, 3, 4, 5, 6, 7, 8 {
   .sml-push-y#{$i} {
     margin-top: $gutter * ($i);
   }
@@ -85,7 +85,7 @@
     margin-top: $gutter/2;
   }
 
-  @each $i in 0, 1, 2, 3, 4, 5, 6 {
+  @each $i in 0, 1, 2, 3, 4, 5, 6, 7, 8 {
     .med-push-y#{$i} {
       margin-top: $gutter * ($i);
     }
@@ -96,7 +96,7 @@
     margin-top: $gutter/2;
   }
 
-  @each $i in 0, 1, 2, 3, 4, 5, 6 {
+  @each $i in 0, 1, 2, 3, 4, 5, 6, 7, 8 {
     .lrg-push-y#{$i} {
       margin-top: $gutter * ($i);
     }
