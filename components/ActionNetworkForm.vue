@@ -44,13 +44,54 @@ export default {
   data() {
     return {
       isSending: false,
-      errorMessage: null,
-      // form fields
-      name: null,
-      email: null,
-      address: null,
-      zipCode: null,
-      phone: null
+      errorMessage: null
+    }
+  },
+
+  computed: {
+    name: {
+      get() {
+        return this.$store.state.name
+      },
+      set(value) {
+        this.$store.commit('setName', value)
+      }
+    },
+
+    email: {
+      get() {
+        return this.$store.state.email
+      },
+      set(value) {
+        this.$store.commit('setEmail', value)
+      }
+    },
+
+    address: {
+      get() {
+        return this.$store.state.address
+      },
+      set(value) {
+        this.$store.commit('setAddress', value)
+      }
+    },
+
+    zipCode: {
+      get() {
+        return this.$store.state.zipCode
+      },
+      set(value) {
+        this.$store.commit('setZipCode', value)
+      }
+    },
+
+    phone: {
+      get() {
+        return this.$store.state.phone
+      },
+      set(value) {
+        this.$store.commit('setPhone', value)
+      }
     }
   },
 
@@ -73,8 +114,6 @@ export default {
           },
           hp_enabled: 'true',
           guard: '',
-          // contact_congress: 1, // TODO: Optional
-          // fcc_ecfs_docket: "17-108", // TODO: Optional
           an_tags: "[\"net-neutrality\"]",
           an_petition_id: this.$store.state.anPetitionId
           // action_comment: TODO add if desired
