@@ -45,7 +45,7 @@
               <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
             </div> <!-- .flex-row -->
             <p class="sml-push-y1 med-push-y2">
-              <nuxt-link to="/">View all</nuxt-link>
+              <nuxt-link to="/selfies">View all</nuxt-link>
             </p>
           </div> <!-- .c -->
         </div> <!-- .row -->

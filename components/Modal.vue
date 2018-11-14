@@ -23,7 +23,7 @@ body.modal-open {
   max-width: 700px;
   max-height: 96vh;
   overflow: hidden;
-  background-color: $white;
+  background-color: $background-color;
   border-radius: $default-border-radius;
 }
 .modal-scroll {
@@ -33,11 +33,12 @@ body.modal-open {
   position: absolute;
   top: $gutter;
   right: $gutter;
-  font-size: $font-size-2;
+  font-size: $font-size-3;
   line-height: 1;
   background-color: transparent;
   border:none;
   cursor: pointer;
+  color: $white;
   text-decoration: none;
 }
 .modal .close:focus {
@@ -77,6 +78,7 @@ export default {
     close() {
       this.$store.commit('setModalVisibility', false)
       this.$store.commit('setModalType', null)
+      this.$store.commit('setModalData', null)
     }
   }
 }
