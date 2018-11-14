@@ -1,8 +1,8 @@
 <template>
   <div class="text-center">
-    <h2>
+    <h3>
       Thanks for submitting your selfie!
-    </h2>
+    </h3>
 
     <div class="row sml-push-y2 med-push-y3">
       <div class="sml-c12 med-c9 lrg-c8 grid-center">

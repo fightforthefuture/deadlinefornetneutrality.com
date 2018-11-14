@@ -35,10 +35,10 @@
 
 <template>
   <div>
-    <h2 class="text-center">
+    <h3 class="text-center">
       Thanks for signing the letter!<br>
       Take a selfie to share in our gallery
-    </h2>
+    </h3>
 
     <form @submit.prevent="submitForm()" class="sml-push-y2 med-push-y3">
       <p class="text-warn" v-if="errorMessage">{{ errorMessage }}</p>
