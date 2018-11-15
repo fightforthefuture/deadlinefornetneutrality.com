@@ -1,0 +1,13 @@
+// Page Header
+
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: $gutter*2 0;
+  z-index: 100;
+  background: $background-color;
+  border-bottom: 1px solid $grey-light-color;
+}

@@ -8,3 +8,7 @@ body {
 body {
   font-size: $base-font-size;
 }
+
+body.full-width .site-content {
+  padding-top: $header-height;
+}

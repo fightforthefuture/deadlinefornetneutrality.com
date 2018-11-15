@@ -1,6 +1,7 @@
 <template>
   <div>
-    <video autoplay loop muted class="sml-hide lrg-show" poster="/earth-poster.png">
+    <video autoplay loop muted class="sml-hide lrg-show fade-in"
+           poster="/earth-poster.png">
       <source src="~assets/videos/earth.mp4" type="video/mp4">
     </video>
     <img src="/earth-poster.png" alt="earth" class="lrg-hide" />
@@ -9,13 +10,15 @@
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h6>12 Days 13 Hours 09 Minutes 32 Seconds</h6>
+            <Countdown/>
             <h1 class="sml-push-y2 med-push-y3">
               Congress, time is running out to save the internet
             </h1>
             <p class="sml-push-y2 med-push-y3">
               We&rsquo;re days away from the deadline. Tell your elected
-              officials: &ldquo;vote to save net neutrality.&rdquo;
+              officials: &ldquo;Vote to save net neutrality. Your
+              decision will alter the course of human history, for better or
+              for worse.&rdquo;
             </p>
 
             <div class="sml-push-y2 med-push-y3 sml-pad-2 med-pad-4 with-border is-rounded">
@@ -33,27 +36,19 @@
         <div class="row">
           <div class="sml-c12 lrg-c10 grid-center text-center">
             <h3>Recent signers:</h3>
-            <div class="flex-row sml-push-y1 med-push-y2">
-              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
-              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
-              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
-              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
-              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
-              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
-              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
-              <div><img src="https://placeimg.com/100/100/people" alt="TODO"/></div>
-            </div> <!-- .flex-row -->
+            <SelfiePreview/>
+
             <p class="sml-push-y1 med-push-y2">
-              <nuxt-link to="/">View all</nuxt-link>
+              <nuxt-link to="/selfies">View all</nuxt-link>
             </p>
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="letter" class="sml-push-y3 med-push-y6">
+    <section id="letter">
       <div class="wrapper">
-        <div class="row">
+        <div class="row sml-pad-y3 med-push-y2">
           <div class="sml-c12 lrg-c10 grid-center">
             <ReadTheLetter/>
           </div> <!-- .c -->
@@ -113,17 +108,21 @@
 import axios from 'axios'
 import config from '~/config'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
+import Countdown from '~/components/Countdown'
 import ActionNetworkForm from '~/components/ActionNetworkForm'
 import SelfieForm from '~/components/SelfieForm'
 import FormComplete from '~/components/FormComplete'
+import SelfiePreview from '~/components/SelfiePreview'
 import ReadTheLetter from '~/components/ReadTheLetter'
 import LogoCloud from '~/components/LogoCloud'
 
 export default {
   components: {
+    Countdown,
     ActionNetworkForm,
     SelfieForm,
     FormComplete,
+    SelfiePreview,
     ReadTheLetter,
     LogoCloud
   },
