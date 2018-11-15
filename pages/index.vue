@@ -16,7 +16,9 @@
             </h1>
             <p class="sml-push-y2 med-push-y3">
               We&rsquo;re days away from the deadline. Tell your elected
-              officials: &ldquo;vote to save net neutrality.&rdquo;
+              officials: &ldquo;Vote to save net neutrality. Your
+              decision will alter the course of human history, for better or
+              for worse.&rdquo;
             </p>
 
             <div class="sml-push-y2 med-push-y3 sml-pad-2 med-pad-4 with-border is-rounded">
