@@ -6,7 +6,7 @@
       <section class="sml-pad-y5">
         <div class="wrapper">
           <div class="sml-c12 med-c9 lrg-c8 grid-center text-center">
-            <h2>Selfies for Net Neutrality</h2>
+            <h2>Photos for Net Neutrality</h2>
             <p class="sml-push-y2 med-push-y3">
               TODO: text
             </p>
