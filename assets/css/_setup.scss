@@ -3,17 +3,20 @@
 // This file is injected into every Vue component and SCSS file
 
 // Colors
-$white:              #FFF;
-$black:              #000;
-$grey-light-color:   #7C679A; // light purple
-$grey-color:         #999;
-$grey-dark-color:    #10071D; // dark purple
-$brand-color:        #307EFF;
-$brand-dark-color:   darken($brand-color, 10%);
-$background-color:   $grey-dark-color;
-$text-color:         $white;
-$success-color:      green; // TODO
-$warn-color:         red; // TODO
+$white:               #FFF;
+$black:               #000;
+$grey-lightest-color: #E3DBEE; // lightest purple
+$grey-light-color:    #7C679A; // light purple
+$grey-med-color:      #4C2F7B; // medium purple
+$grey-color:          #23103F; // medium-dark purple
+$grey-dark-color:     #180A2B; // dark purple
+$grey-darkest-color:  #10071D; // darkest purple
+$brand-color:         #307EFF; // blue
+$brand-dark-color:    darken($brand-color, 10%);
+$background-color:    $grey-darkest-color;
+$text-color:          $white;
+$success-color:       #03E7BF;
+$warn-color:          red; // TODO
 
 $gradient-purple-color: #8644FF;
 $gradient-blue-color:   #3954EE;

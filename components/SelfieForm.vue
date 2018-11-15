@@ -35,56 +35,77 @@
 
 <template>
   <div>
-    <h3 class="text-center">
-      Thanks for signing the letter!<br>
-      Take a selfie to share in our gallery
-    </h3>
+    <h1 class="sml-push-y2 med-push-y3 text-center">
+      <span class="text-success">Thanks</span> for signing the letter!
+    </h1>
+    <p class="sml-push-y1 text-center">
+      Take a photo to share in our gallery
+    </p>
 
     <form @submit.prevent="submitForm()" class="sml-push-y2 med-push-y3">
-      <p class="text-warn" v-if="errorMessage">{{ errorMessage }}</p>
-      <div class="row">
-        <div class="sml-c12 med-c9 lrg-c8 grid-center">
-          <div class="preview-container" :style="{ width: previewWidth, height: previewHeight }" @click="clickPreview">
-            <img v-if="!photoSource && !videoStream" src="~assets/images/selfie-default.png" alt="Your image goes here" ref="placeholderImage"/>
-            <img v-else-if="photoSource" :src="photoSource" ref="photo">
+      <div class="sml-push-y2 med-push-y3 sml-pad-2 fill-grey is-rounded-top">
+        <p class="text-warn" v-if="errorMessage">{{ errorMessage }}</p>
+        <div class="row">
+          <div class="sml-c12 med-c6">
+            <div class="preview-container" :style="{ width: previewWidth, height: previewHeight }" @click="clickPreview">
+              <img v-if="!photoSource && !videoStream"
+                   src="~assets/images/photo-default.png"
+                   alt="Your image goes here"
+                   ref="placeholderImage"/>
+              <img v-else-if="photoSource" :src="photoSource" ref="photo">
 
-            <!-- This always needs to be present in the DOM, but should only be
-                 visible if there's a video stream -->
-            <video v-show="videoStream" autoplay ref="liveView"></video>
+              <!-- This always needs to be present in the DOM, but should only be
+                   visible if there's a video stream -->
+              <video v-show="videoStream" autoplay ref="liveView"></video>
 
-            <!-- This will be combined with the uploaded photo -->
-            <img src="~/assets/images/selfie-frame.png" alt="" ref="overlay" class="overlay">
-          </div>
+              <!-- This will be combined with the uploaded photo -->
+              <img src="~/assets/images/photo-frame.png" alt="" ref="overlay" class="overlay">
+            </div>
 
-          <div class="sml-push-y2" v-if="hasWebcam">
-            <a class="btn btn-block" @click.prevent="startLiveView()" :disabled="isCapturing">{{ captureButtonText }}</a>
-          </div>
+            <div class="flex-row sml-push-y1">
+              <div v-if="hasWebcam">
+                <a class="btn btn-block btn-sml"
+                   @click.prevent="startLiveView()"
+                   :disabled="isCapturing">
+                  {{ captureButtonText }}
+                </a>
+              </div> <!-- v-if -->
 
-          <label class="sml-push-y2 med-push-y3">
-            Or Upload image:
-            <input type="file" :disabled="isCapturing" @change="uploadPhoto" ref="fileInput">
-          </label>
-
-          <label class="sml-push-y2 med-push-y3">
-            Tell us why you care about Net Neutrality
-          </label>
-          <textarea v-model="comment"
-                    placeholder="I care about Net Neutrality because...">
-          </textarea>
-
-          <button class="btn btn-block sml-push-y2 med-push-y3" :disabled="isSending">
-            <span v-if="isSending">
-              Sending...
-            </span>
-            <span v-else>
-              Submit my selfie
-            </span>
-          </button>
-          <p class="sml-push-y1"><small>
-            TODO: possibly add photo guidelines?
-          </small></p>
-        </div> <!-- .c -->
-      </div> <!-- .row -->
+              <div>
+                <a class="btn btn-block btn-sml btn-alt"
+                   @click.prevent="openFilePicker()"
+                   :disabled="isCapturing">
+                  Upload
+                </a>
+                <input type="file"
+                       v-show="false"
+                       @change="uploadPhoto"
+                       :disabled="isCapturing"
+                       ref="fileInput">
+              </div>
+            </div> <!-- .flex-row -->
+          </div> <!-- .c -->
+          <div class="sml-c12 med-c6 sml-push-y2 med-push-y0">
+            <label class="sml-pad-1 fill-grey-lightest is-rounded-top">
+              <h6>Your Net Neutrality thoughts:</h6>
+            </label>
+            <textarea v-model="comment"
+                      class="flat-top"
+                      placeholder="I care about Net Neutrality because...">
+            </textarea>
+          </div> <!-- .c -->
+        </div> <!-- .row -->
+      </div> <!-- .fill -->
+      <div class="sml-pad-2 fill-grey-dark is-rounded-bottom">
+        <button class="btn btn-block" :disabled="isSending || !photoSource">
+          <span v-if="isSending">
+            Sending...
+          </span>
+          <span v-else>
+            Submit my photo
+          </span>
+        </button>
+      </div> <!-- .fill -->
     </form>
     <audio preload="auto" ref="countdownSound">
       <source src="/sounds/countdown.mp3">
@@ -193,7 +214,7 @@ export default {
 
         this.videoStream = stream
         this.isCapturing = true
-        this.captureButtonText = 'Creating preview...'
+        this.captureButtonText = 'Starting...'
 
         // some browsers will just hang forever if your laptop is in clamshell mode
         this.timers.captureFail = setTimeout(() => {
@@ -221,7 +242,7 @@ export default {
 
     countdown(seconds) {
       if (seconds > 0) {
-        this.captureButtonText = `Taking photo in ${seconds}…`
+        this.captureButtonText = `Ready in ${seconds}…`
         this.playSound('countdown')
 
         this.timers.countdown = setTimeout(() => {
@@ -260,12 +281,16 @@ export default {
       this.$trackClick('upload_photo')
     },
 
+    openFilePicker() {
+      this.$refs.fileInput.click()
+    },
+
     clickPreview() {
       if (this.hasWebcam) {
         this.startLiveView()
       }
       else {
-        this.$refs.fileInput.click()
+        this.openFilePicker()
       }
     },
 

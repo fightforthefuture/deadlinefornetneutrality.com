@@ -11,21 +11,10 @@
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
             <Countdown/>
-            <h1 class="sml-push-y2 med-push-y3">
-              Congress, time is running out to save the internet
-            </h1>
-            <p class="sml-push-y2 med-push-y3">
-              We&rsquo;re days away from the deadline. Tell your elected
-              officials: &ldquo;Vote to save net neutrality. Your
-              decision will alter the course of human history, for better or
-              for worse.&rdquo;
-            </p>
 
-            <div class="sml-push-y2 med-push-y3 sml-pad-2 med-pad-4 with-border is-rounded">
-              <ActionNetworkForm v-if="formStep === 1"/>
-              <SelfieForm v-if="formStep === 2"/>
-              <FormComplete v-if="formStep === 3"/>
-            </div> <!-- .pad -->
+            <ActionNetworkForm v-if="formStep === 1"/>
+            <SelfieForm v-if="formStep === 2"/>
+            <FormComplete v-if="formStep === 3"/>
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .wrapper -->

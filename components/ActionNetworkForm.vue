@@ -1,6 +1,16 @@
 <template>
   <div>
-    <form @submit.prevent="submitForm()">
+    <h1 class="sml-push-y2 med-push-y3">
+      Congress, time is running out to save the internet
+    </h1>
+    <p class="sml-push-y2 med-push-y3">
+      We&rsquo;re days away from the deadline. Tell your elected
+      officials: &ldquo;Vote to save net neutrality. Your
+      decision will alter the course of human history, for better or
+      for worse.&rdquo;
+    </p>
+
+    <form @submit.prevent="submitForm()" class="sml-push-y2 med-push-y3">
       <p class="text-warn" v-if="errorMessage">{{ errorMessage }}</p>
       <div class="flex-row">
         <input v-model="name" type="text" placeholder="Name*" required>

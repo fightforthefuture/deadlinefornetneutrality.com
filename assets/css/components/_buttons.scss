@@ -80,8 +80,20 @@ button.btn {
 
 // Buttons > Small
 .btn.btn-sml {
-  padding: $gutter/2 $gutter;
-  font-size: $base-font-size;
+  padding: $gutter $gutter;
+  font-size: $font-size-6;
+}
+
+// Buttons > Alt
+.btn.btn-alt {
+  animation: none;
+  background: $grey-med-color;
+  color: $white;
+}
+.btn.btn-alt:hover,
+.btn.btn-alt:focus {
+  background: $grey-light-color;
+  color: $white;
 }
 
 // Buttons > Disabled
@@ -91,7 +103,10 @@ button.btn {
 .btn[disabled]:hover,
 .btn:disabled:focus,
 .btn[disabled]:focus {
-  background: $grey-color;
+  animation: none;
+  background: transparent;
+  border: 1px solid $grey-med-color;
+  color: $grey-med-color;
   cursor: default;
 }
 
