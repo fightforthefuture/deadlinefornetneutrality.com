@@ -39,7 +39,7 @@
             <SelfiePreview/>
 
             <p class="sml-push-y1 med-push-y2">
-              <nuxt-link to="/selfies">View all</nuxt-link>
+              <nuxt-link to="/gallery">View all</nuxt-link>
             </p>
           </div> <!-- .c -->
         </div> <!-- .row -->
