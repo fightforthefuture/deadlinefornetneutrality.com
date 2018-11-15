@@ -9,7 +9,7 @@
       <div class="flex-row sml-push-y2">
         <input v-model="address" type="text" placeholder="Address"
                class="sml-flex-2">
-        <input v-model="zipCode" type="tel" placeholder="ZIP Code">
+        <input v-model="zipCode" type="tel" placeholder="ZIP Code*" required>
         <input v-model="phone" type="tel" placeholder="Phone #"
                class="sml-flex-2">
       </div> <!-- .flex-row -->
@@ -103,7 +103,7 @@ export default {
 
       try {
         const response = await sendToMothership({
-          subject: "TODO: subject",
+          subject: "Deadline for Net Nutrality",
           member: {
             first_name: this.name,
             email: this.email,
@@ -116,7 +116,6 @@ export default {
           guard: '',
           an_tags: "[\"net-neutrality\"]",
           an_petition_id: this.$store.state.anPetitionId
-          // action_comment: TODO add if desired
         })
 
         this.$trackEvent('petition_form', 'submit')
