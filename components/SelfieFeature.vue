@@ -5,13 +5,9 @@
            :src="selfie.photo"
            :alt="`${selfie.name}`"
            class="grid-center"/>
-      <div v-if="selfie.first_time_voter"
-           class="is-first-time-voter">
-        1st Time Voter
-      </div> <!-- .is-first-time-voter -->
     </div> <!-- .selfie-wrapper -->
     <blockquote class="sml-push-y1"
-        v-text="selfie.comment ? selfie.comment : 'I\'m voting for Net Neutrality!'">
+        v-text="selfie.comment ? selfie.comment : 'I support Net Neutrality!'">
     </blockquote>
     <p v-if="selfie.name" class="sml-push-y-half">
       <strong>

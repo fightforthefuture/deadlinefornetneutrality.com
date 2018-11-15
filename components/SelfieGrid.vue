@@ -14,10 +14,6 @@
                :class="{'has-quote': selfie.comment}"
                v-on="selfie.comment ? { click: () => openModal(selfie) } : {}">
             <img :src="selfie.photo" :alt="`Selfie ${index}`" />
-            <div v-if="selfie.first_time_voter"
-                 class="is-first-time-voter">
-              1st Time<span class="med-hide"> Voter</span>
-            </div> <!-- .is-first-time-voter -->
           </div> <!-- .selfie-wrapper -->
         </div> <!-- v-for -->
       </div> <!-- .row -->
