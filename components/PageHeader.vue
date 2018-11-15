@@ -4,7 +4,7 @@
       <div class="row">
         <div class="sml-c6 med-c8">
           <a href="/">
-            Deadline for Net Neutrality
+            <h3>Deadline for Net Neutrality</h3>
           </a>
         </div> <!-- .c -->
         <div class="sml-c6 med-c4">

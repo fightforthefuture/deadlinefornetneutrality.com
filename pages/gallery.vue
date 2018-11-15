@@ -6,16 +6,7 @@
       <section class="sml-pad-y5">
         <div class="wrapper">
           <div class="sml-c12 med-c9 lrg-c8 grid-center text-center">
-            <h2>Photos for Net Neutrality</h2>
-            <p class="sml-push-y2 med-push-y3">
-              TODO: text
-            </p>
-            <p>
-              For press inquiries, please contact us at:
-              <a href="tel://9788526457">978-852-6457</a> or
-              <a href="mailto:press@fightforthefuture.org">
-                press@fightforthefuture.org</a>
-            </p>
+            <h2>We support Net Neutrality</h2>
           </div> <!-- .c -->
 
           <SelfieGrid/>
