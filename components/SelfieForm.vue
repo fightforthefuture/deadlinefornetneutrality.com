@@ -31,6 +31,12 @@
     pointer-events: none;
   }
 }
+
+.field-comment {
+  @include respond-to(med) {
+    height: 245px; // NOTE: magic number
+  }
+}
 </style>
 
 <template>
@@ -86,13 +92,23 @@
             </div> <!-- .flex-row -->
           </div> <!-- .c -->
           <div class="sml-c12 med-c6 sml-push-y2 med-push-y0">
-            <label class="sml-pad-1 fill-grey-lightest is-rounded-top">
+            <label class="sml-pad-1 sml-pad-x2 fill-grey-lightest is-rounded-top">
               <h6>Your Net Neutrality thoughts:</h6>
             </label>
             <textarea v-model="comment"
-                      class="flat-top"
+                      class="flat-top field-comment"
                       placeholder="I care about Net Neutrality because...">
             </textarea>
+
+            <div class="checkbox sml-push-y1">
+              <input type="checkbox" id="field-veteran" v-model="isVeteran"/>
+              <label for="field-veteran">I am a veteran</label>
+            </div> <!-- .checkbox -->
+
+            <div class="checkbox sml-push-y-half">
+              <input type="checkbox" id="field-biz" v-model="isBizOwner"/>
+              <label for="field-biz">I am a small business owner</label>
+            </div> <!-- .checkbox -->
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .fill -->
@@ -132,7 +148,9 @@ export default {
       hasWebcam: false,
       isSending: false,
       errorMessage: null,
-      comment: null
+      comment: null,
+      isVeteran: false,
+      isBizOwner: false
     }
   },
 
@@ -305,7 +323,10 @@ export default {
           comment: this.comment,
           name: this.$store.state.name,
           email: this.$store.state.email,
-          zip_code: this.$store.state.zipCode
+          zip_code: this.$store.state.zipCode,
+          // TODO: send checkboxes
+          // is_veteran: this.isVeteran,
+          // is_biz_owner: this.isBizOwner
         })
 
         this.$trackEvent('selfie_form', 'submit')

@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1 class="sml-push-y2 med-push-y3">
+    <h1 class="sml-push-y2 med-push-y3 text-center">
       Congress, time is running out to save the internet
     </h1>
-    <p class="sml-push-y2 med-push-y3">
+    <p class="sml-push-y2 med-push-y3 text-center">
       We&rsquo;re days away from the deadline. Tell your elected
       officials: &ldquo;Vote to save net neutrality. Your
       decision will alter the course of human history, for better or
@@ -32,7 +32,7 @@
           Take action
         </span>
       </button>
-      <p class="sml-push-y2 text-meta"><small>
+      <p class="sml-push-y2 text-meta text-center"><small>
         <a href="https://www.fightforthefuture.org/" target="_blank">
           Fight for the Future</a>
         will email you updates, and you can unsubscribe at any time. If

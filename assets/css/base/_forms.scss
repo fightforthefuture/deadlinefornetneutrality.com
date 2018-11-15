@@ -105,6 +105,7 @@ form .radio input[type=radio] {
 form .checkbox label,
 form .radio label {
   margin-left: $gutter*3; // NOTE: accounts for checkbox input width
+  padding-bottom: 0;
 }
 
 // Forms > Checkboxes & Radios > Faux Button

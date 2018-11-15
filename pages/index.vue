@@ -9,8 +9,8 @@
     <section id="intro">
       <div class="wrapper">
         <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
-            <Countdown/>
+          <div class="sml-c12 lrg-c8 grid-center">
+            <Countdown class="text-center"/>
 
             <ActionNetworkForm v-if="formStep === 1"/>
             <SelfieForm v-if="formStep === 2"/>
