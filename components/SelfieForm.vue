@@ -324,9 +324,8 @@ export default {
           name: this.$store.state.name,
           email: this.$store.state.email,
           zip_code: this.$store.state.zipCode,
-          // TODO: send checkboxes
-          // is_veteran: this.isVeteran,
-          // is_biz_owner: this.isBizOwner
+          veteran: this.isVeteran,
+          business_owner: this.isBizOwner
         })
 
         this.$trackEvent('selfie_form', 'submit')
