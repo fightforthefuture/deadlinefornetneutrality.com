@@ -1,9 +1,18 @@
+<style lang="scss" scoped>
+video.earth {
+  height: 175px;
+  width: auto;
+}
+</style>
+
 <template>
   <div>
-    <video autoplay loop muted class="sml-hide lrg-show fade-in"
-           poster="/earth-poster.png">
-      <source src="~assets/videos/earth.mp4" type="video/mp4">
-    </video>
+    <div class="flex-center">
+      <video autoplay loop muted class="sml-hide lrg-show fade-in earth"
+             poster="/earth-poster.png">
+        <source src="~assets/videos/earth.mp4" type="video/mp4">
+      </video>
+    </div>
     <img src="/earth-poster.png" alt="earth" class="lrg-hide" />
 
     <section id="intro">
