@@ -8,7 +8,7 @@
     <div v-if="selfies">
       <div class="row sml-push-y1 med-push-y2">
         <div v-for="(selfie, index) in selfies.data"
-             :key="`selfies-${index}`"
+             :key="selfie.photo"
              class="sml-c6 med-c3 lrg-c2 sml-push-y2">
           <div class="selfie-wrapper"
                :class="{'has-quote': selfie.comment}"
