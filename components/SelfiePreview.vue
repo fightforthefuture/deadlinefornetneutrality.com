@@ -1,8 +1,8 @@
 <template>
   <div v-if="selfies" class="flex-row sml-push-y1 med-push-y2">
     <div v-for="(selfie, index) in selfies" :key="`selfie-${index}`">
-      <img v-if="selfie.photo"
-           :src="selfie.photo"
+      <img v-if="selfie.thumbnail"
+           :src="selfie.thumbnail"
            :alt="`${selfie.name}`"/>
     </div> <!-- v-for -->
   </div> <!-- .flex-row -->
