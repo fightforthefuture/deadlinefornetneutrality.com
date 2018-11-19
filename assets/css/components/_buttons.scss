@@ -130,7 +130,8 @@ button.btn {
 
 // Buttons > Sharing
 .btn.btn-twitter {
-  background-color: $twitter-color;
+  animation: none;
+  background: $twitter-color;
 }
 .btn.btn-twitter:hover,
 .btn.btn-twitter:focus {
@@ -138,7 +139,8 @@ button.btn {
   color: $white;
 }
 .btn.btn-facebook {
-  background-color: $facebook-color;
+  animation: none;
+  background: $facebook-color;
 }
 .btn.btn-facebook:hover,
 .btn.btn-facebook:focus {
