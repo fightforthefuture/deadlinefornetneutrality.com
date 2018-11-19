@@ -14,7 +14,7 @@
             Download
           </a>
 
-          <SocialShareButtons class="sml-push-y2"/>
+          <SocialShareButtons class="sml-push-y1"/>
         </div> <!-- .fill -->
       </div> <!-- .c -->
     </div> <!-- .row -->
