@@ -116,6 +116,10 @@ button.btn {
   color: $grey-med-color;
   cursor: default;
 }
+.btn:disabled img,
+.btn[disabled] img {
+  opacity: 0.2; // NOTE: may not work everywhere, feel free to update
+}
 
 // Buttons > Sharing
 .btn.btn-twitter {
