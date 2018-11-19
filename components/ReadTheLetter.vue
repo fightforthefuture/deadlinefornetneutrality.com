@@ -27,7 +27,7 @@
   right: 10px;
   bottom: -6px;
   height: 50px;
-  background: #BDBDBD; // NOTE: one off color
+  background: #7A6E8B; // NOTE: one off color
   transform: skewY(-0.8deg);
 }
 </style>

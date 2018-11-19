@@ -9,7 +9,7 @@
       <div class="row sml-push-y1 med-push-y2">
         <div v-for="(selfie, index) in selfies.data"
              :key="selfie.photo"
-             class="sml-c6 med-c3 lrg-c2 sml-push-y2">
+             class="sml-c6 med-c3 lrg-c2 sml-push-y1">
           <div class="selfie-wrapper"
                :class="{'has-quote': selfie.comment}"
                v-on="selfie.comment ? { click: () => openModal(selfie) } : {}">
