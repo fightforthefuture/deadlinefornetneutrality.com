@@ -2,20 +2,35 @@
 video.earth {
   position: absolute;
   top: 0;
+  left: 0;
   height: 250px;
-  width: auto;
+  width: 100%;
   object-fit: cover;
+}
+.video-container:after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 170px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    $background-color 100%
+  );
 }
 </style>
 
 <template>
   <div>
-    <div class="flex-center">
+    <div class="flex-center video-container">
       <video autoplay loop muted class="sml-hide lrg-show fade-in earth"
              poster="/earth-poster.png">
         <source src="~assets/videos/earth.mp4" type="video/mp4">
       </video>
-    </div>
+    </div> <!-- .video-container -->
     <img src="/earth-bg.jpg" alt="earth" class="lrg-hide" />
 
     <section id="intro" class="lrg-push-y15">
