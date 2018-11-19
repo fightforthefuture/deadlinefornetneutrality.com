@@ -8,8 +8,10 @@
   <h6 class="countdown">
     <transition name="fade">
       <span v-if="now">
-        {{countdown.days}} Days {{countdown.hours}} Hours {{countdown.minutes}}
-        Minutes {{countdown.seconds}} Seconds
+        {{countdown.days}}<span v-text="abbr ? 'D' : ' Days'"></span>
+        {{countdown.hours}}<span v-text="abbr ? 'H' : ' Hours'"></span>
+        {{countdown.minutes}}<span v-text="abbr ? 'M' : ' Minutes'"></span>
+        {{countdown.seconds}}<span v-text="abbr ? 'S' : ' Seconds'"></span>
       </span>
     </transition>
   </h6>
@@ -17,6 +19,14 @@
 
 <script>
 export default {
+  props: {
+    abbr: {
+      type: Boolean,
+      required: false,
+      default: false
+    }
+  },
+
   data() {
     return {
       now: null

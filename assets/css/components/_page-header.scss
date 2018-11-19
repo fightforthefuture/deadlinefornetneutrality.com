@@ -6,8 +6,35 @@
   left: 0;
   right: 0;
   width: 100%;
-  padding: $gutter*2 0;
+  padding: $gutter*1.5 0;
   z-index: 100;
-  background: $background-color;
-  border-bottom: 1px solid $grey-light-color;
+  background: $grey-dark-color;
+}
+.page-header a.logo {
+  color: $white;
+  text-decoration: none;
+}
+.page-header .logo h3 {
+  line-height: 1;
+}
+.page-header .back {
+  display: block;
+  float: left;
+  position: relative;
+  height: $header-height - $gutter*3;
+  width: 40px + $gutter*2;
+  padding-right: $gutter*2;
+  margin-right:  $gutter*2;
+  border-right: 1px solid $grey-med-color;
+}
+.page-header .back img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -20px; // Half the height
+  width:  40px;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid $white;
+  border-radius: 100px;
 }

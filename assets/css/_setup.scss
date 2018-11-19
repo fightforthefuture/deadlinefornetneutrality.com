@@ -15,8 +15,8 @@ $brand-color:         #307EFF; // blue
 $brand-dark-color:    darken($brand-color, 10%);
 $background-color:    $grey-darkest-color;
 $text-color:          $white;
-$success-color:       #03E7BF;
-$warn-color:          red; // TODO
+$success-color:       #03E7BF; // green
+$warn-color:          #DA4640; // red
 
 $gradient-purple-color: #8644FF;
 $gradient-blue-color:   #3954EE;
@@ -56,7 +56,7 @@ $m-font-size-6: 10px;
 // Layout
 $gutter: 10px;
 $site-max-width: 1040px;
-$header-height: 68px;
+$header-height: 99px;
 
 // Decoration
 $default-transition: all 0.3s ease-in-out;
