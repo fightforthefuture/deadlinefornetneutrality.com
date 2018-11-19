@@ -2,6 +2,7 @@
 video.earth {
   position: absolute;
   top: 0;
+  left: 0;
   height: 250px;
   width: auto;
   object-fit: cover;
