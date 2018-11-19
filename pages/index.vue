@@ -4,19 +4,33 @@ video.earth {
   top: 0;
   left: 0;
   height: 250px;
-  width: auto;
+  width: 100%;
   object-fit: cover;
+}
+.video-container:after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 170px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    $background-color 100%
+  );
 }
 </style>
 
 <template>
   <div>
-    <div class="flex-center">
+    <div class="flex-center video-container">
       <video autoplay loop muted class="sml-hide lrg-show fade-in earth"
              poster="/earth-poster.png">
         <source src="~assets/videos/earth.mp4" type="video/mp4">
       </video>
-    </div>
+    </div> <!-- .video-container -->
     <img src="/earth-bg.jpg" alt="earth" class="lrg-hide" />
 
     <section id="intro" class="lrg-push-y15">
@@ -58,7 +72,7 @@ video.earth {
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="events" class="sml-push-y4 med-push-y8">
+    <!-- <section id="events" class="sml-push-y4 med-push-y8">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
@@ -76,10 +90,10 @@ video.earth {
                 <span class="faux-link">View full map</span>
               </p>
             </a>
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
     <section id="day-of-action" class="sml-push-y4 med-push-y8">
       <div class="wrapper">
