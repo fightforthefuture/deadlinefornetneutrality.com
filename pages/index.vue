@@ -13,7 +13,7 @@ video.earth {
         <source src="~assets/videos/earth.mp4" type="video/mp4">
       </video>
     </div>
-    <img src="/earth-poster.png" alt="earth" class="lrg-hide" />
+    <img src="/earth-bg.jpg" alt="earth" class="lrg-hide" />
 
     <section id="intro">
       <div class="wrapper">
