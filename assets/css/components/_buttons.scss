@@ -71,6 +71,17 @@ button.btn {
   outline: none;
   border: 0;
 }
+.btn img {
+  display: inline-block;
+  max-height: $m-font-size-3 * $base-line-height;
+  width: auto;
+  margin-right: $gutter;
+  vertical-align: top;
+
+  @include respond-to(med) {
+    max-height: $font-size-3 * $base-line-height;
+  }
+}
 
 // Buttons > Block
 .btn.btn-block {
@@ -84,11 +95,7 @@ button.btn {
   font-size: $font-size-6;
 }
 .btn.btn-sml img {
-  display: inline-block;
   max-height: $gutter*2 - 2px;
-  width: auto;
-  margin-right: $gutter;
-  vertical-align: top;
 }
 
 // Buttons > Alt

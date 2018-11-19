@@ -5,8 +5,11 @@
     <div class="site-content">
       <section class="sml-pad-y5">
         <div class="wrapper">
-          <div class="sml-c12 med-c9 lrg-c8 grid-center text-center">
+          <div class="sml-c12 grid-center text-center">
             <h2>We support Net Neutrality</h2>
+            <a href="/" class="btn sml-push-y1 med-push-y2">
+              <img src="/photo.svg" class="med-push-y-half"/>Take your photo
+            </a>
           </div> <!-- .c -->
 
           <SelfieGrid/>

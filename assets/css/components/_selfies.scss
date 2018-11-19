@@ -21,13 +21,13 @@
   display: block;
   content: "\201C";
   position: absolute;
-  top: 0;
-  left: 0;
+  top:  8px;
+  left: 8px;
   padding: 5px 0 0;
   width:  40px;
   height: 40px;
-  background: $brand-color;
-  border-bottom-right-radius: $default-border-radius;
+  background: $gradient-purple-color;
+  border-radius: 100px;
   font-family: $serif-stack;
   font-size: $font-size-2;
   line-height: 1.1;
