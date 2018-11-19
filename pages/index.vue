@@ -4,6 +4,7 @@ video.earth {
   top: 0;
   height: 250px;
   width: auto;
+  object-fit: cover;
 }
 </style>
 
