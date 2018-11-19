@@ -18,7 +18,7 @@
   right: -4px;
   width: 36px;
   height: 38px;
-  background: $background-color url('~assets/images/letter-corner.png') left bottom no-repeat;
+  background: darken($background-color, 1.5%) url('~assets/images/letter-corner.png') left bottom no-repeat;
   background-size: contain;
 }
 .letter-wrapper:after {
