@@ -1,11 +1,11 @@
 <style lang="scss" scoped>
 .countdown {
-  min-height: $font-size-6 * $base-line-height;
+  min-height: $font-size-5 * $base-line-height;
 }
 </style>
 
 <template>
-  <h6 class="countdown">
+  <h5 class="countdown">
     <transition name="fade">
       <span v-if="now">
         {{countdown.days}}<span v-text="abbr ? 'D' : ' Days'"></span>
@@ -14,7 +14,7 @@
         {{countdown.seconds}}<span v-text="abbr ? 'S' : ' Seconds'"></span>
       </span>
     </transition>
-  </h6>
+  </h5>
 </template>
 
 <script>

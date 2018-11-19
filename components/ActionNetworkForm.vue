@@ -16,15 +16,15 @@
         <input v-model="name" type="text" placeholder="Name*" required>
         <input v-model="email" type="email" placeholder="Email*" required>
       </div> <!-- .flex-row -->
-      <div class="flex-row sml-push-y2">
+      <div class="flex-row sml-push-y1">
         <input v-model="address" type="text" placeholder="Address"
                class="sml-flex-2">
-        <input v-model="zipCode" type="tel" placeholder="ZIP Code*" required>
+        <input v-model="zipCode" type="tel" placeholder="ZIP*" required>
         <input v-model="phone" type="tel" placeholder="Phone #"
                class="sml-flex-2">
       </div> <!-- .flex-row -->
 
-      <button class="btn btn-block sml-push-y2" :disabled="isSending">
+      <button class="btn btn-block sml-push-y1" :disabled="isSending">
         <span v-if="isSending">
           Sending...
         </span>
@@ -32,7 +32,7 @@
           Take action
         </span>
       </button>
-      <p class="sml-push-y2 text-meta text-center"><small>
+      <p class="sml-push-y1 text-meta text-center"><small>
         <a href="https://www.fightforthefuture.org/" target="_blank">
           Fight for the Future</a>
         will email you updates, and you can unsubscribe at any time. If

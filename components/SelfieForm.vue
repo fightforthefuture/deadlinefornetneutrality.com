@@ -50,8 +50,8 @@
 
     <form @submit.prevent="submitForm()" class="sml-push-y2 med-push-y3">
       <div class="sml-push-y2 med-push-y3 sml-pad-2 fill-grey is-rounded-top">
-        <p class="text-warn" v-if="errorMessage">{{ errorMessage }}</p>
-        <div class="row">
+        <p class="text-warn text-center" v-if="errorMessage">{{ errorMessage }}</p>
+        <div class="row" :class="{'sml-push-y-half': errorMessage}">
           <div class="sml-c12 lrg-c6">
             <div class="preview-container grid-center"
                  :style="{ width: previewWidth, height: previewHeight }"
@@ -95,7 +95,7 @@
           </div> <!-- .c -->
           <div class="sml-c12 lrg-c6 sml-push-y2 lrg-push-y0">
             <label class="sml-pad-1 sml-pad-x2 fill-grey-lightest is-rounded-top">
-              <h6>Your Net Neutrality thoughts:</h6>
+              <h5>Your Net Neutrality thoughts:</h5>
             </label>
             <textarea v-model="comment"
                       class="flat-top field-comment"

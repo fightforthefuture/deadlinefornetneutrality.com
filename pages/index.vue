@@ -1,6 +1,8 @@
 <style lang="scss" scoped>
 video.earth {
-  height: 175px;
+  position: absolute;
+  top: 0;
+  height: 250px;
   width: auto;
 }
 </style>
@@ -15,7 +17,7 @@ video.earth {
     </div>
     <img src="/earth-bg.jpg" alt="earth" class="lrg-hide" />
 
-    <section id="intro">
+    <section id="intro" class="lrg-push-y15">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center">
@@ -81,7 +83,7 @@ video.earth {
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Join our Day of Action on Nov 28</h2>
+            <h2>Join our Day of<br>Action on Nov 28</h2>
             <p class="sml-push-y2 med-push-y3">
               We&rsquo;re planning an epic, final push to save net neutrality on
               November 28th, and we need your help to get as many people as
