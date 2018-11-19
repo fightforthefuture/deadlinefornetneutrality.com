@@ -52,8 +52,10 @@
       <div class="sml-push-y2 med-push-y3 sml-pad-2 fill-grey is-rounded-top">
         <p class="text-warn" v-if="errorMessage">{{ errorMessage }}</p>
         <div class="row">
-          <div class="sml-c12 med-c6">
-            <div class="preview-container" :style="{ width: previewWidth, height: previewHeight }" @click="clickPreview">
+          <div class="sml-c12 lrg-c6">
+            <div class="preview-container grid-center"
+                 :style="{ width: previewWidth, height: previewHeight }"
+                 @click="clickPreview">
               <img v-if="!photoSource && !videoStream"
                    src="~assets/images/photo-default.png"
                    alt="Your image goes here"
@@ -91,7 +93,7 @@
               </div>
             </div> <!-- .flex-row -->
           </div> <!-- .c -->
-          <div class="sml-c12 med-c6 sml-push-y2 med-push-y0">
+          <div class="sml-c12 lrg-c6 sml-push-y2 lrg-push-y0">
             <label class="sml-pad-1 sml-pad-x2 fill-grey-lightest is-rounded-top">
               <h6>Your Net Neutrality thoughts:</h6>
             </label>
