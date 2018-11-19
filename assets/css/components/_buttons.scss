@@ -83,6 +83,13 @@ button.btn {
   padding: $gutter $gutter;
   font-size: $font-size-6;
 }
+.btn.btn-sml img {
+  display: inline-block;
+  max-height: $gutter*2 - 2px;
+  width: auto;
+  margin-right: $gutter;
+  vertical-align: top;
+}
 
 // Buttons > Alt
 .btn.btn-alt {

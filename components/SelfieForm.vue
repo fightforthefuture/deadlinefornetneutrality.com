@@ -72,8 +72,8 @@
               <div v-if="hasWebcam">
                 <a class="btn btn-block btn-sml"
                    @click.prevent="startLiveView()"
-                   :disabled="isCapturing">
-                  {{ captureButtonText }}
+                   :disabled="isCapturing"
+                   v-html="captureButtonHtml">
                 </a>
               </div> <!-- v-if -->
 
@@ -81,7 +81,7 @@
                 <a class="btn btn-block btn-sml btn-alt"
                    @click.prevent="openFilePicker()"
                    :disabled="isCapturing">
-                  Upload
+                  <img src="/upload.svg">Upload
                 </a>
                 <input type="file"
                        v-show="false"
@@ -144,7 +144,7 @@ export default {
       previewWidth: '',
       previewHeight: '',
       isCapturing: false,
-      captureButtonText: 'Take Photo',
+      captureButtonHtml: "<img src='/photo.svg'>Take Photo",
       hasWebcam: false,
       isSending: false,
       errorMessage: null,
@@ -232,7 +232,7 @@ export default {
 
         this.videoStream = stream
         this.isCapturing = true
-        this.captureButtonText = 'Starting...'
+        this.captureButtonHtml = 'Starting...'
 
         // some browsers will just hang forever if your laptop is in clamshell mode
         this.timers.captureFail = setTimeout(() => {
@@ -260,7 +260,7 @@ export default {
 
     countdown(seconds) {
       if (seconds > 0) {
-        this.captureButtonText = `Ready in ${seconds}…`
+        this.captureButtonHtml = `Ready in ${seconds}…`
         this.playSound('countdown')
 
         this.timers.countdown = setTimeout(() => {
@@ -282,7 +282,7 @@ export default {
 
       this.isCapturing = false
       this.stopLiveView()
-      this.captureButtonText = "Retake Photo"
+      this.captureButtonHtml = "<img src='/retake.svg'>Retake Photo"
     },
 
     takePhoto() {
