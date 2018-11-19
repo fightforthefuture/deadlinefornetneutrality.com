@@ -83,6 +83,13 @@ button.btn {
   padding: $gutter $gutter;
   font-size: $font-size-6;
 }
+.btn.btn-sml img {
+  display: inline-block;
+  max-height: $gutter*2 - 2px;
+  width: auto;
+  margin-right: $gutter;
+  vertical-align: top;
+}
 
 // Buttons > Alt
 .btn.btn-alt {
@@ -108,6 +115,10 @@ button.btn {
   border: 1px solid $grey-med-color;
   color: $grey-med-color;
   cursor: default;
+}
+.btn:disabled img,
+.btn[disabled] img {
+  opacity: 0.2; // NOTE: may not work everywhere, feel free to update
 }
 
 // Buttons > Sharing
