@@ -67,7 +67,7 @@
               <video v-show="videoStream" autoplay ref="liveView"></video>
 
               <!-- This will be combined with the uploaded photo -->
-              <img src="~/assets/images/photo-frame.png" alt="" ref="overlay" class="overlay">
+              <img v-show="!photoSource" src="~/assets/images/photo-frame.png" alt="" ref="overlay" class="overlay">
             </div>
 
             <div class="flex-row sml-push-y1">
