@@ -2,7 +2,6 @@
 video.earth {
   position: absolute;
   top: 0;
-  left: 0;
   height: 250px;
   width: auto;
   object-fit: cover;
@@ -58,7 +57,7 @@ video.earth {
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="events" class="sml-push-y4 med-push-y8">
+    <!-- <section id="events" class="sml-push-y4 med-push-y8">
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
@@ -76,10 +75,10 @@ video.earth {
                 <span class="faux-link">View full map</span>
               </p>
             </a>
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
+          </div>
+        </div>
+      </div>
+    </section> -->
 
     <section id="day-of-action" class="sml-push-y4 med-push-y8">
       <div class="wrapper">
