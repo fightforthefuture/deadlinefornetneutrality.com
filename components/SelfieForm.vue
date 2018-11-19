@@ -34,7 +34,7 @@
 
 .field-comment {
   @include respond-to(med) {
-    height: 245px; // NOTE: magic number
+    height: 317px; // NOTE: magic number
   }
 }
 </style>
@@ -101,16 +101,6 @@
                       class="flat-top field-comment"
                       placeholder="I care about Net Neutrality because...">
             </textarea>
-
-            <div class="checkbox sml-push-y1">
-              <input type="checkbox" id="field-veteran" v-model="isVeteran"/>
-              <label for="field-veteran">I am a veteran</label>
-            </div> <!-- .checkbox -->
-
-            <div class="checkbox sml-push-y-half">
-              <input type="checkbox" id="field-biz" v-model="isBizOwner"/>
-              <label for="field-biz">I am a small business owner</label>
-            </div> <!-- .checkbox -->
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .fill -->
@@ -150,9 +140,7 @@ export default {
       hasWebcam: false,
       isSending: false,
       errorMessage: null,
-      comment: null,
-      isVeteran: false,
-      isBizOwner: false
+      comment: null
     }
   },
 
@@ -325,9 +313,7 @@ export default {
           comment: this.comment,
           name: this.$store.state.name,
           email: this.$store.state.email,
-          zip_code: this.$store.state.zipCode,
-          veteran: this.isVeteran,
-          business_owner: this.isBizOwner
+          zip_code: this.$store.state.zipCode
         })
 
         this.$trackEvent('selfie_form', 'submit')
