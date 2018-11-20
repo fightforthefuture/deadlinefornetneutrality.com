@@ -45,7 +45,7 @@
       <span class="text-success">Thanks</span> for signing the letter!
     </h1>
     <p class="sml-push-y1 text-center">
-      Take a photo to share in our gallery
+      Telecom lobbyists are telling Congress no one cares anymore. Prove them wrong. Take a photo and let’s show them the faces of net neutrality supporters.
     </p>
 
     <form @submit.prevent="submitForm()" class="sml-push-y2 med-push-y3">
