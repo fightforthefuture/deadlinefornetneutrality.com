@@ -3,6 +3,7 @@ body.modal-open {
   overflow: hidden;
 }
 .modal-wrapper {
+  animation: fade-in .3s;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -23,6 +23,16 @@ export default {
       type: Object,
       required: true
     }
+  },
+
+  created() {
+    const query = Object.assign({}, this.$route.query, { photo: this.selfie.id })
+    this.$router.replace({ path: this.$route.path, query: query })
+  },
+
+  destroyed() {
+    const query = Object.assign({}, this.$route.query, { photo: undefined })
+    this.$router.replace({ path: this.$route.path, query: query })
   }
 }
 </script>

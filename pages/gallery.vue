@@ -31,6 +31,7 @@ import PageHeader from '~/components/PageHeader'
 import SelfieGrid from '~/components/SelfieGrid'
 import Modal from '~/components/Modal'
 import SelfieModal from '~/components/SelfieModal'
+import axios from 'axios'
 
 export default {
   layout: 'skeleton',
@@ -53,6 +54,18 @@ export default {
       }),
       bodyAttrs: {
         class: 'full-width'
+      }
+    }
+  },
+
+  async created() {
+    if (this.$route.query.photo) {
+      try {
+        const { data } = await axios.get(`https://data.battleforthenet.com/deadline/selfies/${this.$route.query.photo}.json`)
+        this.$store.dispatch('openSelfieModal', data)
+      }
+      catch (error) {
+        // failed to load photo
       }
     }
   },

@@ -6,9 +6,7 @@
            :alt="`${selfie.name}`"
            class="grid-center"/>
     </div> <!-- .selfie-wrapper -->
-    <blockquote class="sml-push-y1"
-        v-text="selfie.comment ? selfie.comment : 'I support Net Neutrality!'">
-    </blockquote>
+    <blockquote v-if="selfie.comment" class="sml-push-y1" >{{ selfie.comment }}</blockquote>
     <p v-if="selfie.name" class="sml-push-y-half">
       <strong>
         {{ selfie.name }}

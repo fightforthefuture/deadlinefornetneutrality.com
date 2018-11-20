@@ -12,7 +12,7 @@
              class="sml-c6 med-c3 lrg-c2 sml-push-y1">
           <div class="selfie-wrapper"
                :class="{'has-quote': selfie.comment}"
-               v-on="selfie.comment ? { click: () => openModal(selfie) } : {}">
+               @click="openSelfieModal(selfie)">
             <img :src="selfie.photo" :alt="`Selfie ${index}`" />
           </div> <!-- .selfie-wrapper -->
         </div> <!-- v-for -->
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapActions, mapState } from 'vuex'
 
 export default {
   computed: {
@@ -53,6 +53,8 @@ export default {
   },
 
   methods: {
+    ...mapActions([ 'openSelfieModal' ]),
+
     loadMore() {
       if (!this.isEndOfFeed) {
         this.$store.commit('setSelfiesCurPageNum', this.selfiesCurPageNum + 1)
@@ -66,12 +68,6 @@ export default {
       if (isBottomOfPage) {
         this.loadMore()
       }
-    },
-
-    openModal(selfie) {
-      this.$store.commit('setModalVisibility', true)
-      this.$store.commit('setModalType', 'selfie')
-      this.$store.commit('setModalData', selfie)
     }
   }
 }
