@@ -108,7 +108,7 @@ video.earth {
               FCC before the end of this Congress. So we’re bringing together tech companies, 
               small businesses, and Internet users for an epic push on November 29th to make 
               lawmakers take action. 
-              <a href="https://drive.google.com/drive/folders/1NIJks4-VfazLrmrWT7-LwPNo_EkUenxv">Click here</a> 
+              <a href="https://docs.google.com/document/d/1WFhmv86b9xy-0zE0YgqF7wP6K3QsgwYfXFRDqXLLK4o">Click here</a> 
               to see ideas for how you can use your slice of the Internet to spread the word 
               with social media posts, banner ads, and shareable images.
             </p>
