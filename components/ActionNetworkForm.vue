@@ -4,10 +4,9 @@
       Congress, time is running out to save the internet
     </h1>
     <p class="sml-push-y2 med-push-y3 text-center">
-      We&rsquo;re days away from the deadline. Tell your elected
-      officials: &ldquo;Vote to save net neutrality. Your
-      decision will alter the course of human history, for better or
-      for worse.&rdquo;
+      We&rsquo;re days away from the deadline to overturn the FCC. 
+      Tell lawmakers: &ldquo;Your decision will impact the future of 
+      humanity. Vote to save net neutrality before it's too late.&rdquo;
     </p>
 
     <form @submit.prevent="submitForm()" class="sml-push-y2 med-push-y3">
