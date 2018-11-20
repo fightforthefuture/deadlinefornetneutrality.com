@@ -128,6 +128,10 @@ export default {
           an_petition_id: this.$store.state.anPetitionId
         })
 
+        if (this.phone) {
+          this.startTextFlow()
+        }
+
         this.$trackEvent('petition_form', 'submit')
         this.isSending = false
         this.$store.commit('setFormStep', 2)
@@ -137,6 +141,18 @@ export default {
         this.errorMessage = "Sorry, that didn’t work for some reason. Please try again."
       }
     },
+
+    startTextFlow() {
+      axios.post('https://text-flow-starter.fftf.xyz/opt-ins', {
+        opt_in_path: 'OPA87027D0EB3B606B1A60DB391DCA2033',
+        phone: this.phone,
+        name: this.name,
+        email: this.email,
+        zip_code: this.zipCode,
+        street: this.address
+      })
+      .catch(console.error)
+    }
   }
 }
 </script>
