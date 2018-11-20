@@ -9,10 +9,12 @@
     "dev:lan": "HOST=0.0.0.0 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
+    "pregenerate": "npm run generate-media",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "deploy": "aws s3 sync dist s3://www.deadlinefornetneutrality.com --acl public-read --delete"
+    "deploy": "aws s3 sync dist s3://www.deadlinefornetneutrality.com --acl public-read --delete",
+    "generate-media": "node scripts/generate-media.js"
   },
   "dependencies": {
     "nuxt": "^1.0.0"

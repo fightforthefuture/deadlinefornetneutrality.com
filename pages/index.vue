@@ -115,6 +115,8 @@ video.earth {
         </div> <!-- .row -->
       </div> <!-- .wrapper -->
     </section>
+
+    <!-- <MediaGallery :preview="true" /> -->
   </div>
 </template>
 
@@ -129,6 +131,7 @@ import FormComplete from '~/components/FormComplete'
 import SelfiePreview from '~/components/SelfiePreview'
 import ReadTheLetter from '~/components/ReadTheLetter'
 import LogoCloud from '~/components/LogoCloud'
+import MediaGallery from '~/components/MediaGallery'
 
 export default {
   components: {
@@ -138,7 +141,8 @@ export default {
     FormComplete,
     SelfiePreview,
     ReadTheLetter,
-    LogoCloud
+    LogoCloud,
+    MediaGallery
   },
 
   head() {
