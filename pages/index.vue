@@ -101,18 +101,16 @@ video.earth {
           <div class="sml-c12 lrg-c8 grid-center text-center">
             <h2>Join our Day of Action<br>on Nov 29th</h2>
             <p class="sml-push-y2 med-push-y3">
-              Congress has until the end of the year to reverse Ajit Pai’s repeal of 
-              net neutrality – after this, it gets way harder to restore strong protections 
-              against blocking, throttling, and new fees online. The next month is our last 
-              best chance to save the open Internet so we’re planning an epic push to pressure 
-              members of Congress to pass the Congressional Review Act (CRA) resolution and 
-              overturn the FCC before it expires. So on November 29th, we're organizing a day 
-              of action ... and we need YOUR help to reach as many people as possible.
-            </p>
-            <p>
-              Do you run a site or blog? Are you active on social media? Put your small piece of 
-              the Internet on alert with these banner ads and social media images. 
-              <a href="#TODO">Click here</a> to see ideas for blog posts, emails, tweets and more.
+              Congress has until the end of the year to reverse Ajit Pai’s net neutrality 
+              repeal &mdash; afterwards, it gets way harder to restore protections against 
+              blocking, throttling, and new fees. Our last best chance to save the open 
+              Internet is to pass the Congressional Review Act resolution and overturn the 
+              FCC before the end of this Congress. So we’re bringing together tech companies, 
+              small businesses, and Internet users for an epic push on November 29th to make 
+              lawmakers take action. 
+              <a href="https://drive.google.com/drive/folders/1NIJks4-VfazLrmrWT7-LwPNo_EkUenxv">Click here</a> 
+              to see ideas for how you can use your slice of the Internet to spread the word 
+              with social media posts, banner ads, and shareable images.
             </p>
           </div> <!-- .c -->
         </div> <!-- .row -->
