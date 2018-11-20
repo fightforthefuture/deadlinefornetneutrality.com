@@ -14,7 +14,7 @@
             Download
           </a>
 
-          <SocialShareButtons class="sml-push-y1"/>
+          <SocialShareButtons class="sml-push-y1" :url="shareURL"/>
         </div> <!-- .fill -->
       </div> <!-- .c -->
     </div> <!-- .row -->
@@ -31,7 +31,11 @@ export default {
   },
 
   computed: {
-    ...mapState([ 'photoSource', 'selfie' ])
+    ...mapState([ 'photoSource', 'selfie' ]),
+
+    shareURL() {
+      return `https://deadline.fftf.xyz/share/${this.selfie.id}`
+    }
   }
 }
 </script>

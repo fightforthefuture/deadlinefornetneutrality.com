@@ -29,11 +29,15 @@ module.exports = {
   /*
   ** Router configuration
   */
-  router: {
-    scrollBehavior: function (to, from, savedPosition) {
-      return { x: 0, y: 0 }
-    }
-  },
+  //
+  // this goofs up $router.replace(), but i think it was here for a reason
+  // so i'll leave it commented out for now...
+  //
+  // router: {
+  //   scrollBehavior: function (to, from, savedPosition) {
+  //     return { x: 0, y: 0 }
+  //   }
+  // },
   /*
   ** Build configuration
   */

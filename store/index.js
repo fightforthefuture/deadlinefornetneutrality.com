@@ -121,6 +121,12 @@ const createStore = () => {
         catch (error) {
           console.log("Something went wrong with fetching the selfies")
         }
+      },
+
+      openSelfieModal({ commit, state }, selfie) {
+        commit('setModalVisibility', true)
+        commit('setModalType', 'selfie')
+        commit('setModalData', selfie)
       }
     }
   })

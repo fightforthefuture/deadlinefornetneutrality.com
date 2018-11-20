@@ -53,7 +53,7 @@
         <p class="text-warn text-center" v-if="errorMessage">{{ errorMessage }}</p>
         <div class="row" :class="{'sml-push-y-half': errorMessage}">
           <div class="sml-c12 lrg-c6">
-            <div class="preview-container grid-center"
+            <div class="preview-container grid-center is-rounded"
                  :style="{ width: previewWidth, height: previewHeight }"
                  @click="clickPreview">
               <img v-if="!photoSource && !videoStream"
@@ -308,7 +308,7 @@ export default {
       this.isSending = true
 
       try {
-        const { data } = await axios.post('https://selfie-api.fftf.xyz/selfies', {
+        const { data } = await axios.post('https://deadline.fftf.xyz/selfies', {
           photo: this.photoSource,
           comment: this.comment,
           name: this.$store.state.name,

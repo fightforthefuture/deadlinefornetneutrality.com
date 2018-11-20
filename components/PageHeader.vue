@@ -19,7 +19,7 @@
               <strong>Filter by state:</strong>
             </p>
             <form>
-              <select v-model="selectedState" @change="fetchSelfies(selectedState)">
+              <select v-model="selectedState" @change="updateSelectedState()">
                 <option :value="null">Show all states</option>
                 <option v-for="(name, code) in states" :key="code" :value="code">
                   {{ name }}
@@ -54,22 +54,33 @@ export default {
 
   async created() {
     // Fetch selfies (optionally via `/?state=XX` in url query param)
-    let newState = this.$route.query.state ? this.$route.query.state.toUpperCase() : null
-    if (newState && US_STATES[newState]) {
-      this.selectedState = newState
-      this.fetchSelfies(this.selectedState)
-    } else {
-      this.fetchSelfies(null)
+    const state = this.$route.query.state ? this.$route.query.state.toUpperCase() : null
+
+    if (state && US_STATES[state]) {
+      this.selectedState = state
     }
+
+    this.fetchSelfies()
   },
 
   methods: {
-    fetchSelfies(newState) {
-      if (newState) {
-        this.$store.dispatch('getSelfies', { state: newState.toLowerCase() })
-      } else {
+    fetchSelfies() {
+      if (this.selectedState) {
+        this.$store.dispatch('getSelfies', { state: this.selectedState.toLowerCase() })
+      }
+      else {
         this.$store.dispatch('getSelfies', { page: 1 })
       }
+    },
+
+    updateSelectedState() {
+      this.$router.replace({
+        path: this.$route.path,
+        query: {
+          state: (this.selectedState || undefined)
+        }
+      })
+      this.fetchSelfies()
     }
   }
 }
