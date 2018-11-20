@@ -10,7 +10,7 @@
           <img :src="photoSource" alt="A photo of you!"/>
         </div> <!-- .fill -->
         <div class="sml-pad-2 fill-grey-dark is-rounded-bottom">
-          <a class="btn btn-block" :href="selfie.photo" target="_blank">
+          <a class="btn btn-block" :href="selfie.photo" target="_blank" @click="$trackClick('download_selfie')">
             Download
           </a>
 

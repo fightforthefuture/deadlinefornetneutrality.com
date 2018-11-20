@@ -55,7 +55,7 @@ video.earth {
             <SelfiePreview/>
 
             <p class="sml-push-y1 med-push-y2">
-              <nuxt-link to="/gallery">View all</nuxt-link>
+              <a href="/gallery/" @click="$trackClick('view_all_selfies')">View all</a>
             </p>
           </div> <!-- .c -->
         </div> <!-- .row -->
@@ -101,14 +101,14 @@ video.earth {
           <div class="sml-c12 lrg-c8 grid-center text-center">
             <h2>Join our Day of Action<br>on Nov 29th</h2>
             <p class="sml-push-y2 med-push-y3">
-              Congress has until the end of this session to reverse Ajit Pai’s net neutrality 
+              Congress has until the end of this session to reverse Ajit Pai’s net neutrality
               repeal &mdash; afterwards, it gets way harder to restore protections against
-              blocking, throttling, and new fees. So we’re bringing together tech companies, 
-              small businesses, and Internet users for an epic push on November 29th to pressure 
-              lawmakers into signing the Congressional Review Act resolution to restore net 
+              blocking, throttling, and new fees. So we’re bringing together tech companies,
+              small businesses, and Internet users for an epic push on November 29th to pressure
+              lawmakers into signing the Congressional Review Act resolution to restore net
               neutrality before it expires.
               <a href="https://docs.google.com/document/d/1WFhmv86b9xy-0zE0YgqF7wP6K3QsgwYfXFRDqXLLK4o" target="_blank">Click here for ideas</a>
-              on how you can help announce the protest through social media posts, banner ads, 
+              on how you can help announce the protest through social media posts, banner ads,
               and site-wide alerts.
             </p>
           </div> <!-- .c -->
