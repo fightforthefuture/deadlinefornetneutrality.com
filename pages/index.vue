@@ -101,15 +101,15 @@ video.earth {
           <div class="sml-c12 lrg-c8 grid-center text-center">
             <h2>Join our Day of Action<br>on Nov 29th</h2>
             <p class="sml-push-y2 med-push-y3">
-              Congress has until the end of the year to reverse Ajit Pai’s net neutrality 
-              repeal &mdash; afterwards, it gets way harder to restore protections against 
-              blocking, throttling, and new fees. Our last best chance to save the open 
-              Internet is to pass the Congressional Review Act resolution and overturn the 
-              FCC before the end of this Congress. So we’re bringing together tech companies, 
-              small businesses, and Internet users for an epic push on November 29th to make 
-              lawmakers take action. 
-              <a href="https://docs.google.com/document/d/1WFhmv86b9xy-0zE0YgqF7wP6K3QsgwYfXFRDqXLLK4o">Click here</a> 
-              to see ideas for how you can use your slice of the Internet to spread the word 
+              Congress has until the end of the year to reverse Ajit Pai’s net neutrality
+              repeal &mdash; afterwards, it gets way harder to restore protections against
+              blocking, throttling, and new fees. Our last best chance to save the open
+              Internet is to pass the Congressional Review Act resolution and overturn the
+              FCC before the end of this Congress. So we’re bringing together tech companies,
+              small businesses, and Internet users for an epic push on November 29th to make
+              lawmakers take action.
+              <a href="https://docs.google.com/document/d/1WFhmv86b9xy-0zE0YgqF7wP6K3QsgwYfXFRDqXLLK4o" target="_blank">Click here</a>
+              to see ideas for how you can use your slice of the Internet to spread the word
               with social media posts, banner ads, and shareable images.
             </p>
           </div> <!-- .c -->
