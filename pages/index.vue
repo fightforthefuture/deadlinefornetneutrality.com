@@ -99,19 +99,20 @@ video.earth {
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Join our Day of<br>Action on Nov 28</h2>
+            <h2>Join our Day of Action<br>on Nov 29th</h2>
             <p class="sml-push-y2 med-push-y3">
-              We&rsquo;re planning an epic, final push to save net neutrality on
-              November 28th, and we need your help to get as many people as
-              possible to pressure members of Congress. December 10th is the
-              final day for lawmakers to file the CRA discharge petition to
-              force a House vote on overturning the FCC. So we&rsquo;re bringing
-              the entire Internet together for one last day of action to make
-              sure they do the right thing. Do you run a site or blog? Are you
-              active on social media? Put your small piece of the Internet on
-              alert with these banner ads and social media images.
-              <a href="#TODO">Click here</a> to see ideas for blog posts,
-              emails, tweets and more.
+              Congress has until the end of the year to reverse Ajit Pai’s repeal of 
+              net neutrality – after this, it gets way harder to restore strong protections 
+              against blocking, throttling, and new fees online. The next month is our last 
+              best chance to save the open Internet so we’re planning an epic push to pressure 
+              members of Congress to pass the Congressional Review Act (CRA) resolution and 
+              overturn the FCC before it expires. So on November 29th, we're organizing a day 
+              of action ... and we need YOUR help to reach as many people as possible.
+            </p>
+            <p>
+              Do you run a site or blog? Are you active on social media? Put your small piece of 
+              the Internet on alert with these banner ads and social media images. 
+              <a href="#TODO">Click here</a> to see ideas for blog posts, emails, tweets and more.
             </p>
           </div> <!-- .c -->
         </div> <!-- .row -->
