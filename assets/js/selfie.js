@@ -16,6 +16,23 @@ function rotateImage(image, degrees) {
   return canvas
 }
 
+function getRotationDegrees(orientation) {
+  // https://www.daveperrett.com/articles/2012/07/28/exif-orientation-handling-is-a-ghetto/
+  switch (orientation) {
+    case 3:
+    case 4:
+      return 180
+    case 5:
+    case 6: // I see this one a lot on my iPhone X / iOS 12
+      return 90
+    case 7:
+    case 8:
+      return -90
+    default:
+      return 0
+  }
+}
+
 function createImageFromFile(file) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader()
@@ -26,11 +43,10 @@ function createImageFromFile(file) {
       img.onload = () => {
         EXIF.getData(img, () => {
           const exifData = EXIF.getAllTags(img)
+          const degrees = getRotationDegrees(exifData.Orientation)
 
-          // we may need to handle additional orientations, but this fixed 100%
-          // of the problems with my iPhone uploads
-          if (exifData.Orientation === 6) {
-            const rotatedImage = rotateImage(img, 90)
+          if (degrees) {
+            const rotatedImage = rotateImage(img, degrees)
             return resolve(rotatedImage)
           }
 
