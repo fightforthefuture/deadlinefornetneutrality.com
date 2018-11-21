@@ -4,8 +4,8 @@
       Congress, time is running out to save the internet
     </h1>
     <p class="sml-push-y2 med-push-y3 text-center">
-      We&rsquo;re days away from the deadline to overturn the FCC. 
-      Tell lawmakers: &ldquo;Your decision will impact the future of 
+      We&rsquo;re days away from the deadline to overturn the FCC.
+      Tell lawmakers: &ldquo;Your decision will impact the future of
       humanity. Vote to save net neutrality before it's too late.&rdquo;
     </p>
 
@@ -123,6 +123,8 @@ export default {
           },
           hp_enabled: 'true',
           guard: '',
+          contact_congress: 1,
+          org: 'fftf',
           an_tags: "[\"net-neutrality\"]",
           an_petition_id: this.$store.state.anPetitionId
         })
