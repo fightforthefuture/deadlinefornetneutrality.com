@@ -116,7 +116,6 @@ video.earth {
       </div> <!-- .wrapper -->
     </section>
 
-    <!-- <MediaGallery :preview="true" /> -->
   </div>
 </template>
 
