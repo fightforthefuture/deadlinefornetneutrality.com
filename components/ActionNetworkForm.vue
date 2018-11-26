@@ -56,6 +56,8 @@ export default {
   },
 
   computed: {
+    org() { return this.$store.state.org },
+
     name: {
       get() {
         return this.$store.state.name
@@ -122,7 +124,7 @@ export default {
           hp_enabled: 'true',
           guard: '',
           contact_congress: 1,
-          org: 'fftf',
+          org: this.org,
           an_tags: "[\"net-neutrality\"]",
           an_petition_id: this.$store.state.anPetitionId
         })
