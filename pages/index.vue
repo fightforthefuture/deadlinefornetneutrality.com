@@ -161,7 +161,7 @@ export default {
   },
 
   computed: {
-    ...mapState(['org', 'formStep'])
+    ...mapState(['formStep'])
   },
 
   methods: {

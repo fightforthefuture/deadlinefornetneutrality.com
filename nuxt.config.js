@@ -71,6 +71,6 @@ module.exports = {
   plugins: [
     { src: '~/plugins/analytics.js', ssr: false },
     { src: '~/plugins/hash-link-fix.js', ssr: false },
-    { src: '~/plugins/org-rotation.js', ssr: false }
+    { src: '~/plugins/org-rotation.js' }
   ]
 }

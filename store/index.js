@@ -38,7 +38,6 @@ const createStore = () => {
     mutations: {
       setOrg(state, value) {
         state.org = value
-        console.log(state.org)
       },
 
       setModalVisibility(state, value) {
@@ -133,25 +132,6 @@ const createStore = () => {
         commit('setModalVisibility', true)
         commit('setModalType', 'selfie')
         commit('setModalData', selfie)
-      }
-    },
-    getters: {
-      orgInfo: state => {
-        console.log('get', state.org)
-        if (state.org === 'dp') {
-          console.log('dp')
-          return {
-            name: 'Demand Progress',
-            url: 'https://demandprogress.org/'
-          }
-        }
-        else {
-          console.log('else')
-          return {
-            name: 'Fight for the Future',
-            url: 'https://www.fightforthefuture.org/'
-          }
-        }
       }
     }
   })
