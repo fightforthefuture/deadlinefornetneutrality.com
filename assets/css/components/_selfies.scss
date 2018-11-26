@@ -6,8 +6,10 @@
 .selfie-wrapper.has-quote {
   cursor: pointer;
 }
-.selfie-wrapper.has-quote:hover:before,
-.selfie-wrapper.has-quote:focus:before {
+.selfie-wrapper.has-quote:before,
+.selfie-wrapper.has-quote:before {
+  // NOTE: must be `display: block` before hover/focus so iPhones don't require
+  //       2 taps to activate links
   display: block;
   content: '';
   position: absolute;
@@ -15,6 +17,10 @@
   right: 0;
   bottom: 0;
   left: 0;
+  background: transparent;
+}
+.selfie-wrapper.has-quote:hover:before,
+.selfie-wrapper.has-quote:focus:before {
   background: transparentize($gradient-purple-color, 0.7);
 }
 .selfie-wrapper.has-quote:after {
