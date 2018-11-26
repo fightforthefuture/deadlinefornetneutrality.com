@@ -52,11 +52,13 @@ video.earth {
         <div class="row">
           <div class="sml-c12 lrg-c10 grid-center text-center">
             <h3>Recent signers:</h3>
-            <SelfiePreview/>
+            <a href="/gallery/" @click="$trackClick('view_all_selfies')">
+              <SelfiePreview/>
 
-            <p class="sml-push-y1 med-push-y2">
-              <a href="/gallery/" @click="$trackClick('view_all_selfies')">View all</a>
-            </p>
+              <p class="sml-push-y1 med-push-y2">
+                <span class="faux-link">View all</span>
+              </p>
+            </a>
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .wrapper -->
