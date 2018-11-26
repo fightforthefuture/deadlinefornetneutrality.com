@@ -32,8 +32,8 @@
         </span>
       </button>
       <p class="sml-push-y1 text-meta text-center"><small>
-        <a href="https://www.fightforthefuture.org/" target="_blank">
-          Fight for the Future</a>
+        {{orgInfo}}
+        <a :href="orgInfo.url" target="_blank">{{ orgInfo.name }}</a>
         will email you updates, and you can unsubscribe at any time. If
         you enter your number (it&rsquo;s optional) we will follow up by SMS.
         Message &amp; data rates apply. You can always text STOP to stop
@@ -47,6 +47,7 @@
 
 <script>
 import axios from 'axios'
+import { mapGetters } from 'vuex'
 import { sendToMothership } from '~/assets/js/helpers'
 
 export default {
@@ -58,6 +59,8 @@ export default {
   },
 
   computed: {
+    ...mapGetters(['orgInfo']),
+
     name: {
       get() {
         return this.$store.state.name
