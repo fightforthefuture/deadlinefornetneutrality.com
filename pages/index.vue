@@ -125,6 +125,7 @@ video.earth {
 <script>
 import axios from 'axios'
 import config from '~/config'
+import { mapState } from 'vuex'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
 import Countdown from '~/components/Countdown'
 import ActionNetworkForm from '~/components/ActionNetworkForm'
@@ -160,7 +161,7 @@ export default {
   },
 
   computed: {
-    formStep () { return this.$store.state.formStep }
+    ...mapState(['formStep'])
   },
 
   methods: {

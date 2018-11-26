@@ -2,11 +2,21 @@
   <div class="page-footer text-center sml-push-y4 med-push-y8">
     <div class="sml-pad-y4">
       <div class="wrapper">
-        <h5>Built by:</h5>
-        <a href="https://www.fightforthefuture.org">
-          <img src="~assets/images/fftf-logo.svg" class="grid-center"
-               alt="Fight for the Future logo" />
-        </a>
+        <h5>A project of:</h5>
+        <div class="sml-c12 med-c10 lrg-c7 grid-center">
+          <div class="flex-row flex-center">
+            <a href="https://www.fightforthefuture.org">
+              <img src="~assets/images/fftf-logo.svg"
+                   class="grid-center"
+                   alt="Fight for the Future logo" />
+            </a>
+            <a href="https://demandprogress.org/">
+              <img src="~assets/images/demand-progress-logo.png"
+                   class="dp-logo grid-center"
+                   alt="Demand Progress logo" />
+            </a>
+          </div> <!-- .flex-row -->
+        </div> <!-- .c -->
 
         <h5 class="sml-push-y2 med-push-y3">
           For press inquiries, please contact us at:

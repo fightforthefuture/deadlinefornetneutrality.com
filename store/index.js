@@ -5,6 +5,7 @@ import axios from 'axios'
 const createStore = () => {
   return new Vuex.Store({
     state: {
+      org: 'fftf',
       anPetitionId: config.actionNetworkPetitionId,
       donateUrl: config.donateUrl,
       letterText: config.letterText,
@@ -35,6 +36,10 @@ const createStore = () => {
       selfie: {}
     },
     mutations: {
+      setOrg(state, value) {
+        state.org = value
+      },
+
       setModalVisibility(state, value) {
         state.modalVisible = value
       },
