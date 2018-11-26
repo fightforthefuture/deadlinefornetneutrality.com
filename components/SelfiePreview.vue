@@ -1,19 +1,25 @@
 <template>
-  <div v-if="selfies" class="flex-row sml-push-y1 med-push-y2">
-    <div v-for="(selfie, index) in selfies" :key="`selfie-${index}`">
-      <img v-if="selfie.thumbnail"
-           :src="selfie.thumbnail"
-           :alt="`${selfie.name}`"/>
-    </div> <!-- v-for -->
-  </div> <!-- .flex-row -->
+  <div v-if="selfieRows" class="sml-push-y1 med-push-y2">
+    <div v-for="(row, index) in selfieRows" :key="`selfie-row-${index}`"
+         class="flex-row sml-push-y1">
+      <div v-for="(selfie, index) in row" :key="`selfie-${index}`">
+        <img v-if="selfie.thumbnail"
+             :src="selfie.thumbnail"
+             :alt="`${selfie.name}`"/>
+      </div> <!-- v-for -->
+    </div> <!-- v-for row -->
+  </div> <!-- v-if -->
 </template>
 
 <script>
 export default {
   computed: {
-    selfies() {
+    selfieRows() {
       if (this.$store.state.selfies) {
-        return this.$store.state.selfies.data.slice(0,8)
+        return [
+          this.$store.state.selfies.data.slice(0,8),
+          this.$store.state.selfies.data.slice(8,16)
+        ]
       }
     }
   },

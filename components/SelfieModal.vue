@@ -7,15 +7,21 @@
 <template>
   <div v-if="selfie" class="text-center">
     <SelfieFeature :selfie="selfie"/>
+
+    <SocialShareButtons
+      class="sml-push-y1"
+      :url="`https://deadline.fftf.xyz/share/${this.selfie.id}`"/>
   </div> <!-- v-if -->
 </template>
 
 <script>
 import SelfieFeature from '~/components/SelfieFeature'
+import SocialShareButtons from '~/components/SocialShareButtons'
 
 export default {
   components: {
-    SelfieFeature
+    SelfieFeature,
+    SocialShareButtons
   },
 
   props: {
