@@ -9,7 +9,10 @@
     <blockquote v-if="selfie.comment" class="sml-push-y1" >{{ selfie.comment }}</blockquote>
     <p v-if="selfie.name" class="sml-push-y-half">
       <strong>
-        {{ selfie.name }}
+        <a href="selfie.website" v-if="selfie.website">
+          {{ selfie.name }}</a>
+        <span v-if="!selfie.website">{{ selfie.name }}</span>
+        <span v-if="selfie.description">, {{ selfie.description }}</span>
         <span v-if="selfie.location">
           from {{ selfie.location }}
         </span>
