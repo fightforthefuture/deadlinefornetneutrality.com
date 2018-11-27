@@ -168,15 +168,6 @@ export default {
     if (this.$route.query.from) {
       this.from = this.$route.query.from
     }
-    if (this.$route.query.email) {
-      this.$store.commit('setEmail', this.$route.query.email)
-    }
-    if (this.$route.query.name) {
-      this.$store.commit('setName', this.$route.query.name)
-    }
-    if (this.$route.query.zip) {
-      this.$store.commit('setZipCode', this.$route.query.zip)
-    }
   },
 
   async mounted() {
