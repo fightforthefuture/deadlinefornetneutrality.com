@@ -3,23 +3,51 @@
     "title": "Banner Ads",
     "description": "If you run a website or blog, post our banner ads to let your visitors know you support net neutrality. Be sure to link these ads back to <a href='https://www.deadlinefornetneutrality.com'>DeadlineForNetNeutrality.com</a>.",
     "images": [
-      "/media/banners/300x200 BIG CABLE.png",
-      "/media/banners/600x450 BIG CABLE.png",
-      "/media/banners/600x500 BIG CABLE.png",
-      "/media/banners/940x788 BIG CABLE.png",
-      "/media/banners/940x788 SELL OUT.png",
-      "/media/banners/Facebook sharing 1200 x 630@2x.png"
+      "/media/banners/300x200_Time(2).jpg",
+      "/media/banners/300x200_Time.jpg",
+      "/media/banners/300x200_Together.jpg",
+      "/media/banners/300x250_Time(2).jpg",
+      "/media/banners/300x250_Time.jpg",
+      "/media/banners/300x250_Together.jpg",
+      "/media/banners/300x300_Time(2).jpg",
+      "/media/banners/300x300_Time.jpg",
+      "/media/banners/300x300_Together.jpg",
+      "/media/banners/300x600_Time(2).jpg",
+      "/media/banners/300x600_Time.jpg",
+      "/media/banners/300x600_Together.jpg",
+      "/media/banners/600x450_Time(2).jpg",
+      "/media/banners/600x450_Time.jpg",
+      "/media/banners/600x450_Together.jpg",
+      "/media/banners/600x500_Time(2).jpg",
+      "/media/banners/600x500_Time.jpg",
+      "/media/banners/600x500_Together.jpg",
+      "/media/banners/600x600_Time(2).jpg",
+      "/media/banners/600x600_Time.jpg",
+      "/media/banners/600x600_Together.jpg",
+      "/media/banners/940x788_Time(2).jpg",
+      "/media/banners/940x788_Time.jpg",
+      "/media/banners/940x788_Together.jpg",
+      "/media/banners/970x90_Time(2).jpg",
+      "/media/banners/970x90_Time.jpg",
+      "/media/banners/970x90_Together.jpg"
     ]
   },
   "social": {
     "title": "Social Media",
     "description": "Change your social media avatars and profile pics to help sound the alarm.",
     "images": [
-      "/media/social/Facebook Cover BIG CABLE.png",
-      "/media/social/Facebook Cover SELL OUT.png",
-      "/media/social/Instagram Story BIG CABLE.png",
-      "/media/social/Instagram Story SELL OUT.png",
-      "/media/social/Profile Picture BIG CABLE.png"
+      "/media/social/Cover_Time(2).jpg",
+      "/media/social/Cover_Time.jpg",
+      "/media/social/Cover_Together.jpg",
+      "/media/social/Instagram_Time(2).jpg",
+      "/media/social/Instagram_Time.jpg",
+      "/media/social/Instagram_Together.jpg",
+      "/media/social/Profile_Time(2).jpg",
+      "/media/social/Profile_Time.jpg",
+      "/media/social/Profile_Together.jpg",
+      "/media/social/Share_Time(2).png",
+      "/media/social/Share_Time.jpg",
+      "/media/social/Share_Together.jpg"
     ]
   }
 }

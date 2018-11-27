@@ -170,7 +170,7 @@ export default {
     }
   },
 
-  created() {
+  mounted() {
     // If route contains a valid step number, go to that step
     if (this.$route.query.step) {
       let step = parseInt(this.$route.query.step, 10)
