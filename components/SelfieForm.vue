@@ -158,6 +158,17 @@ export default {
 
   created() {
     this.timers = {}
+
+    // If route contains form fields, update their values in the store
+    if (this.$route.query.email) {
+      this.$store.commit('setEmail', this.$route.query.email)
+    }
+    if (this.$route.query.name) {
+      this.$store.commit('setName', this.$route.query.name)
+    }
+    if (this.$route.query.zip) {
+      this.$store.commit('setZipCode', this.$route.query.zip)
+    }
   },
 
   async mounted() {
@@ -311,9 +322,9 @@ export default {
         const { data } = await axios.post('https://deadline.fftf.xyz/selfies', {
           photo: this.photoSource,
           comment: this.comment,
-          name: this.$store.state.name,
-          email: this.$store.state.email,
-          zip_code: this.$store.state.zipCode
+          name: this.$store.state.name ? this.$store.state.name : null,
+          email: this.$store.state.email ? this.$store.state.email : null,
+          zip_code: this.$store.state.zipCode ? this.$store.state.zipCode : null
         })
 
         this.$trackEvent('selfie_form', 'submit')
