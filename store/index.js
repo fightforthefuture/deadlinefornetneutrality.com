@@ -7,6 +7,7 @@ const createStore = () => {
     state: {
       org: 'fftf',
       anPetitionId: config.actionNetworkPetitionId,
+      dpPetitionId: config.demandProgressPetitionId,
       donateUrl: config.donateUrl,
       letterText: config.letterText,
       modalVisible: false,

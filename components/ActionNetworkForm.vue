@@ -126,7 +126,7 @@ export default {
           contact_congress: 1,
           org: this.org,
           an_tags: "[\"net-neutrality\"]",
-          an_petition_id: this.$store.state.anPetitionId
+          an_petition_id: this.org === 'dp' ? this.$store.state.dpPetitionId : this.$store.state.anPetitionId
         })
 
         if (this.phone) {
