@@ -125,7 +125,6 @@ video.earth {
 <script>
 import axios from 'axios'
 import config from '~/config'
-import { mapState } from 'vuex'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
 import Countdown from '~/components/Countdown'
 import ActionNetworkForm from '~/components/ActionNetworkForm'
@@ -161,7 +160,24 @@ export default {
   },
 
   computed: {
-    ...mapState(['formStep'])
+    formStep: {
+      get() {
+        return this.$store.state.formStep
+      },
+      set(value) {
+        this.$store.commit('setFormStep', value)
+      }
+    }
+  },
+
+  created() {
+    // If route contains a valid step number, go to that step
+    if (this.$route.query.step) {
+      let step = parseInt(this.$route.query.step, 10)
+      if ([1,2].indexOf(step) >= 0) {
+        this.formStep = step
+      }
+    }
   },
 
   methods: {
