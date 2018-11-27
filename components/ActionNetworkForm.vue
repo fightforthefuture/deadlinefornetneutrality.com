@@ -112,7 +112,7 @@ export default {
 
       try {
         const response = await sendToMothership({
-          subject: "Deadline for Net Nutrality",
+          subject: "Deadline for Net Neutrality",
           member: {
             first_name: this.name,
             email: this.email,
