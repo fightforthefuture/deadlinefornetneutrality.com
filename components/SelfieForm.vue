@@ -42,10 +42,14 @@
 <template>
   <div>
     <h1 class="sml-push-y2 med-push-y3 text-center">
-      <span class="text-success">Thanks</span> for signing the letter!
+      <span class="text-success">Thanks</span> for
+      <span v-if="from === 'stopfcc'">taking action at stopthefcc.net!</span>
+      <span v-else>signing the letter!</span>
     </h1>
     <p class="sml-push-y1 text-center">
-      Telecom lobbyists are telling Congress no one cares anymore. Prove them wrong. Take a photo and let’s show them the faces of net neutrality supporters.
+      Telecom lobbyists are telling Congress no one cares anymore. Prove them
+      wrong. Take a photo and let&rsquo;s show them the faces of net neutrality
+      supporters.
     </p>
 
     <form @submit.prevent="submitForm()" class="sml-push-y2 med-push-y3">
@@ -140,7 +144,8 @@ export default {
       hasWebcam: false,
       isSending: false,
       errorMessage: null,
-      comment: null
+      comment: null,
+      from: null
     }
   },
 
@@ -159,7 +164,10 @@ export default {
   created() {
     this.timers = {}
 
-    // If route contains form fields, update their values in the store
+    // If route contains query params, update values
+    if (this.$route.query.from) {
+      this.from = this.$route.query.from
+    }
     if (this.$route.query.email) {
       this.$store.commit('setEmail', this.$route.query.email)
     }
