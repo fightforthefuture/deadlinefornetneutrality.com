@@ -69,6 +69,7 @@ form input.error:focus,
 form textarea.error:focus{
   border-color: $warn-color;
 }
+form input.flat-top,
 form textarea.flat-top {
   border: none;
   border-top-right-radius: 0;

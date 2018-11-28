@@ -157,9 +157,17 @@ body.full-width .wrapper {
 .sml-flex-col {
   flex-direction: column;
 }
+.sml-flex-col > * {
+  margin-right: 0;
+}
 .med-flex-row {
   @include respond-to(med) {
     flex-direction: row;
+  }
+}
+.med-flex-row > * {
+  @include respond-to(med) {
+    margin-right: $gutter;
   }
 }
 .lrg-flex-row {
@@ -185,6 +193,9 @@ body.full-width .wrapper {
       flex: $i;
     }
   }
+}
+.flex-fixed-height {
+  flex-grow: 0;
 }
 
 // Visibility
