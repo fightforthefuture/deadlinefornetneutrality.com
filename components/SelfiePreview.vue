@@ -12,13 +12,16 @@
 </template>
 
 <script>
+import shuffle from 'lodash/shuffle'
+
 export default {
   computed: {
     selfieRows() {
       if (this.$store.state.selfies) {
+        const shuffledSelfies = shuffle(this.$store.state.selfies.data)
         return [
-          this.$store.state.selfies.data.slice(0,8),
-          this.$store.state.selfies.data.slice(8,16)
+          shuffledSelfies.slice(0, 8),
+          shuffledSelfies.slice(8, 16)
         ]
       }
     }
