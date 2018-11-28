@@ -31,12 +31,6 @@
     pointer-events: none;
   }
 }
-
-.field-comment {
-  @include respond-to(med) {
-    height: 317px; // NOTE: magic number
-  }
-}
 </style>
 
 <template>
@@ -55,8 +49,8 @@
     <form @submit.prevent="submitForm()" class="sml-push-y2 med-push-y3">
       <div class="sml-push-y2 med-push-y3 sml-pad-2 fill-grey is-rounded-top">
         <p class="text-warn text-center" v-if="errorMessage">{{ errorMessage }}</p>
-        <div class="row" :class="{'sml-push-y-half': errorMessage}">
-          <div class="sml-c12 lrg-c6">
+        <div class="flex-row sml-flex-col med-flex-row" :class="{'sml-push-y-half': errorMessage}">
+          <div class="">
             <div class="preview-container grid-center is-rounded"
                  :style="{ width: previewWidth, height: previewHeight }"
                  @click="clickPreview">
@@ -97,14 +91,21 @@
               </div>
             </div> <!-- .flex-row -->
           </div> <!-- .c -->
-          <div class="sml-c12 lrg-c6 sml-push-y2 lrg-push-y0">
-            <label class="sml-pad-1 sml-pad-x2 fill-grey-lightest is-rounded-top">
+          <div class="flex-row sml-flex-col sml-push-y2 med-push-y0">
+            <label class="flex-fixed-height sml-pad-1 sml-pad-x2 fill-grey-lightest is-rounded-top">
               <h5>Your Net Neutrality thoughts:</h5>
             </label>
-            <textarea v-model="comment"
-                      class="flat-top field-comment"
+            <textarea v-model="comment" class="flat-top"
                       placeholder="I care about Net Neutrality because...">
             </textarea>
+
+            <div v-if="from === 'stopfcc'" class="flex-fixed-height sml-push-y1">
+              <label class="sml-pad-1 sml-pad-x2 fill-grey-lightest is-rounded-top">
+                <h5>Name:</h5>
+              </label>
+              <input v-model="name" type="text" placeholder="Name"
+                     class="flat-top">
+            </div> <!-- v-if -->
           </div> <!-- .c -->
         </div> <!-- .row -->
       </div> <!-- .fill -->
@@ -157,6 +158,15 @@ export default {
 
       set(value) {
         this.$store.commit('setPhotoSource', value)
+      }
+    },
+
+    name: {
+      get() {
+        return this.$store.state.name
+      },
+      set(value) {
+        this.$store.commit('setName', value)
       }
     }
   },
@@ -321,7 +331,7 @@ export default {
         const { data } = await axios.post('https://deadline.fftf.xyz/selfies', {
           photo: this.photoSource,
           comment: this.comment,
-          name: this.$store.state.name ? this.$store.state.name : null,
+          name: this.name ? this.name : null,
           email: this.$store.state.email ? this.$store.state.email : null,
           zip_code: this.$store.state.zipCode ? this.$store.state.zipCode : null
         })
