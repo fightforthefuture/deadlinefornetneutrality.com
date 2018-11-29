@@ -10,7 +10,7 @@
         <div v-for="(selfie, index) in selfies.data"
              :key="selfie.photo"
              class="sml-c6 med-c3 lrg-c2 sml-push-y1">
-          <div class="selfie-wrapper fade-in"
+          <div class="selfie-wrapper"
                :class="{'has-quote': selfie.comment}"
                @click="openSelfieModal(selfie)">
             <img :src="selfie.photo" :alt="`Selfie ${index}`" />
