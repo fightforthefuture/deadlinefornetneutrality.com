@@ -51,7 +51,7 @@ video.earth {
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c10 grid-center text-center">
-            <h3>Recent signers:</h3>
+            <h3>Recent supporters:</h3>
             <a href="/gallery/" @click="$trackClick('view_all_selfies')">
               <SelfiePreview/>
 
