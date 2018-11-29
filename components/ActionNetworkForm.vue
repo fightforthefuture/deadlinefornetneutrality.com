@@ -111,8 +111,12 @@ export default {
       this.isSending = true
 
       try {
+        const actionComment = `${this.$store.state.letterText}\n\nSigned, ${this.name}\n\n\n(The sender of this message generated it using tools available at DeadlineForNetNeutrality.com on ${new Date()}.)`
+
         const response = await sendToMothership({
-          subject: "Deadline for Net Neutrality",
+          subject: "Vote to save net neutrality before it's too late!",
+          contact_congress: 1,
+          action_comment: actionComment,
           member: {
             first_name: this.name,
             email: this.email,
@@ -123,7 +127,6 @@ export default {
           },
           hp_enabled: 'true',
           guard: '',
-          contact_congress: 1,
           org: this.org,
           an_tags: "[\"net-neutrality\"]",
           an_petition_id: this.org === 'dp' ? this.$store.state.dpPetitionId : this.$store.state.anPetitionId
