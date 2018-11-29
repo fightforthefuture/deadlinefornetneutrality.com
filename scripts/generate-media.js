@@ -23,6 +23,9 @@ async function main() {
         const data = require(path.join(subdirPath, 'data.json'))
         title = data.title
         description = data.description
+        type = data.type
+        viewAll = data.viewAll
+        externalImages = data.externalImages
       }
 
       if (!title) {
@@ -32,7 +35,15 @@ async function main() {
       assets[kebabCase(subdir)] = {
         title: title,
         description: description,
+        type: type,
+        viewAll: viewAll,
         images: []
+      }
+
+      if (externalImages) {
+        for (let img of externalImages) {
+          assets[subdir].images.push(img)
+        }
       }
 
       for (let file of fs.readdirSync(subdirPath)) {
