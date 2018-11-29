@@ -99,7 +99,7 @@
                       placeholder="I care about Net Neutrality because...">
             </textarea>
 
-            <div v-if="from === 'stopfcc'" class="flex-fixed-height sml-push-y1">
+            <div v-if="from === 'stopfcc' || from === 'redalert'" class="flex-fixed-height sml-push-y1">
               <label class="sml-pad-1 sml-pad-x2 fill-grey-lightest is-rounded-top">
                 <h5>Name:</h5>
               </label>
