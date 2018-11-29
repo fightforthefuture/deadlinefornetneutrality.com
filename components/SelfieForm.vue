@@ -333,7 +333,8 @@ export default {
           comment: this.comment,
           name: this.name ? this.name : null,
           email: this.$store.state.email ? this.$store.state.email : null,
-          zip_code: this.$store.state.zipCode ? this.$store.state.zipCode : null
+          zip_code: this.$store.state.zipCode ? this.$store.state.zipCode : null,
+          source: this.$route.query.from || 'web'
         })
 
         this.$trackEvent('selfie_form', 'submit')
