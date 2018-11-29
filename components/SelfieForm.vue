@@ -42,7 +42,7 @@
     </h1>
     <p class="sml-push-y1 text-center">
       Telecom lobbyists are telling Congress no one cares anymore. Prove them
-      wrong. Take a photo and let&rsquo;s show them the faces of net neutrality
+      wrong before the deadline. Take a photo and let&rsquo;s show them the faces of net neutrality
       supporters.
     </p>
 
