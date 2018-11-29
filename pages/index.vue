@@ -64,61 +64,65 @@ video.earth {
       </div> <!-- .wrapper -->
     </section>
 
-    <section id="letter">
-      <div class="wrapper">
-        <div class="row sml-pad-y3 med-push-y2">
-          <div class="sml-c12 lrg-c10 grid-center">
-            <ReadTheLetter/>
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
+    <div v-if="!isAfterAction">
 
-    <!-- <section id="events" class="sml-push-y4 med-push-y8">
-      <div class="wrapper">
-        <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Join the nationwide protests</h2>
-            <p class="sml-push-y2 med-push-y3">
-              Want to make your voice heard? Check out the map below to find a
-              protest or a meeting with a representative in your state. And if
-              there are no events in your area, consider organizing one!
-            </p>
-            <a href="https://www.battleforthenet.com/map/" target="_blank">
-              <img src="https://data.battleforthenet.com/events.png"
-                   alt="A map of net neutrality protests"
-                   class="is-rounded sml-push-y2 med-push-y3">
+      <section id="letter">
+        <div class="wrapper">
+          <div class="row sml-pad-y3 med-push-y2">
+            <div class="sml-c12 lrg-c10 grid-center">
+              <ReadTheLetter/>
+            </div> <!-- .c -->
+          </div> <!-- .row -->
+        </div> <!-- .wrapper -->
+      </section>
+
+      <!-- <section id="events" class="sml-push-y4 med-push-y8">
+        <div class="wrapper">
+          <div class="row">
+            <div class="sml-c12 lrg-c8 grid-center text-center">
+              <h2>Join the nationwide protests</h2>
               <p class="sml-push-y2 med-push-y3">
-                <span class="faux-link">View full map</span>
+                Want to make your voice heard? Check out the map below to find a
+                protest or a meeting with a representative in your state. And if
+                there are no events in your area, consider organizing one!
               </p>
-            </a>
+              <a href="https://www.battleforthenet.com/map/" target="_blank">
+                <img src="https://data.battleforthenet.com/events.png"
+                     alt="A map of net neutrality protests"
+                     class="is-rounded sml-push-y2 med-push-y3">
+                <p class="sml-push-y2 med-push-y3">
+                  <span class="faux-link">View full map</span>
+                </p>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section> -->
+      </section> -->
 
-    <section id="day-of-action" class="sml-push-y4 med-push-y8">
-      <div class="wrapper">
-        <div class="row">
-          <div class="sml-c12 lrg-c8 grid-center text-center">
-            <h2>Join our Day of Action<br>on Nov 29th</h2>
-            <p class="sml-push-y2 med-push-y3">
-              Congress has until the end of this session to reverse Ajit Pai’s net neutrality
-              repeal &mdash; afterwards, it gets way harder to restore protections against
-              blocking, throttling, and new fees. So we’re bringing together tech companies,
-              small businesses, and Internet users for an epic push on November 29th to pressure
-              lawmakers into signing the Congressional Review Act resolution to restore net
-              neutrality before it expires.
-              <a href="https://docs.google.com/document/d/1WFhmv86b9xy-0zE0YgqF7wP6K3QsgwYfXFRDqXLLK4o" target="_blank">Click here for ideas</a>
-              on how you can help announce the protest through social media posts, banner ads,
-              and site-wide alerts.
-            </p>
-          </div> <!-- .c -->
-        </div> <!-- .row -->
-      </div> <!-- .wrapper -->
-    </section>
+      <section id="day-of-action" class="sml-push-y4 med-push-y8">
+        <div class="wrapper">
+          <div class="row">
+            <div class="sml-c12 lrg-c8 grid-center text-center">
+              <h2>Join our Day of Action<br>on Nov 29th</h2>
+              <p class="sml-push-y2 med-push-y3">
+                Congress has until the end of this session to reverse Ajit Pai’s net neutrality
+                repeal &mdash; afterwards, it gets way harder to restore protections against
+                blocking, throttling, and new fees. So we’re bringing together tech companies,
+                small businesses, and Internet users for an epic push on November 29th to pressure
+                lawmakers into signing the Congressional Review Act resolution to restore net
+                neutrality before it expires.
+                <a href="https://docs.google.com/document/d/1WFhmv86b9xy-0zE0YgqF7wP6K3QsgwYfXFRDqXLLK4o" target="_blank">Click here for ideas</a>
+                on how you can help announce the protest through social media posts, banner ads,
+                and site-wide alerts.
+              </p>
+            </div> <!-- .c -->
+          </div> <!-- .row -->
+        </div> <!-- .wrapper -->
+      </section>
 
-    <MediaGallery :preview="true" />
+      <MediaGallery :preview="true" />
+
+    </div> <!-- </isAfterAction> -->
   </div>
 </template>
 
@@ -159,6 +163,12 @@ export default {
     }
   },
 
+  data() {
+    return {
+      isAfterAction: false
+    }
+  },
+
   computed: {
     formStep: {
       get() {
@@ -177,6 +187,10 @@ export default {
       if ([1,2].indexOf(step) >= 0) {
         this.formStep = step
       }
+    }
+
+    if (this.$route.query.from === 'stopfcc') {
+      this.isAfterAction = true
     }
   },
 
