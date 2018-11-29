@@ -32,6 +32,20 @@
       "/media/banners/970x90_Together.jpg"
     ]
   },
+  "gifs": {
+    "title": "Gifs",
+    "description": "Share animated calls to action around the internet.",
+    "type": "external",
+    "viewAll": {
+      "text": "View all on Giphy",
+      "url": "https://giphy.com/channel/fight_for_the_future"
+    },
+    "images": [
+      "https://media.giphy.com/media/3mgvvJvrEIzigQp2n3/giphy.gif",
+      "https://media.giphy.com/media/x4aJtCE0ZCoWBQNcbD/giphy.gif",
+      "https://media.giphy.com/media/KVFt95uM4xb1CxSOLr/giphy.gif"
+    ]
+  },
   "social": {
     "title": "Social Media",
     "description": "Change your social media avatars and profile pics to help sound the alarm.",
