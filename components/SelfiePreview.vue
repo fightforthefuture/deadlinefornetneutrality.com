@@ -29,6 +29,8 @@ export default {
 
   created() {
     this.$store.dispatch('getSelfies', { page: 1 })
+    this.$store.dispatch('getSelfies', { page: 2 })
+    this.$store.dispatch('getSelfies', { page: 3 })
   }
 }
 </script>
