@@ -9,7 +9,7 @@
             </div> <!-- .back -->
             <div class="sml-hide med-show">
               <h3>Congress, time<br>is running out</h3>
-              <Countdown :abbr="true" class="text-warn"/>
+              <!-- <Countdown :abbr="true" class="text-warn"/> -->
             </div> <!-- hide and show -->
           </a>
         </div> <!-- .c -->
