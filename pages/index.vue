@@ -37,7 +37,7 @@ video.earth {
       <div class="wrapper">
         <div class="row">
           <div class="sml-c12 lrg-c8 grid-center">
-            <Countdown class="text-center"/>
+            <!-- <Countdown class="text-center"/> -->
 
             <ActionNetworkForm v-if="formStep === 1"/>
             <SelfieForm v-if="formStep === 2"/>
@@ -108,7 +108,7 @@ video.earth {
                 Congress has until the end of this session to reverse Ajit Pai’s net neutrality
                 repeal &mdash; afterwards, it gets way harder to restore protections against
                 blocking, throttling, and new fees. So we’re bringing together tech companies,
-                small businesses, and Internet users for an epic push to pressure lawmakers into 
+                small businesses, and Internet users for an epic push to pressure lawmakers into
                 signing the Congressional Review Act resolution to restore net neutrality before it expires.
                 <a href="https://docs.google.com/document/d/1WFhmv86b9xy-0zE0YgqF7wP6K3QsgwYfXFRDqXLLK4o" target="_blank">Click here for ideas</a>
                 on how you can help announce the protest through social media posts, banner ads,
