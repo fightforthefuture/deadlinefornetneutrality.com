@@ -8,8 +8,7 @@
               <img src="~assets/images/arrow-left.svg" alt="Back to home" />
             </div> <!-- .back -->
             <div class="sml-hide med-show">
-              <h3>Congress, time<br>is running out</h3>
-              <!-- <Countdown :abbr="true" class="text-warn"/> -->
+              <h3 class="sml-push-y1">Congress, time<br>is running out</h3>
             </div> <!-- hide and show -->
           </a>
         </div> <!-- .c -->
@@ -35,13 +34,8 @@
 
 <script>
 import US_STATES from '~/assets/data/states.json'
-import Countdown from '~/components/Countdown'
 
 export default {
-  components: {
-    Countdown
-  },
-
   data () {
     return {
       selectedState: null
