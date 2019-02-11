@@ -24,7 +24,7 @@ video.earth {
 </style>
 
 <template>
-  <div>
+  <DefaultLayout>
     <div class="flex-center video-container">
       <video autoplay loop muted class="sml-hide lrg-show fade-in earth"
              poster="/earth-poster.png">
@@ -122,13 +122,14 @@ video.earth {
       <MediaGallery :preview="true" />
 
     </div> <!-- </isAfterAction> -->
-  </div>
+  </DefaultLayout>
 </template>
 
 <script>
 import axios from 'axios'
 import config from '~/config'
 import { createMetaTags, smoothScrollToElement } from '~/assets/js/helpers'
+import DefaultLayout from '~/components/DefaultLayout'
 import Countdown from '~/components/Countdown'
 import ActionNetworkForm from '~/components/ActionNetworkForm'
 import SelfieForm from '~/components/SelfieForm'
@@ -140,6 +141,7 @@ import MediaGallery from '~/components/MediaGallery'
 
 export default {
   components: {
+    DefaultLayout,
     Countdown,
     ActionNetworkForm,
     SelfieForm,

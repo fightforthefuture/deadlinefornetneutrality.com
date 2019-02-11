@@ -21,7 +21,7 @@ body.modal-open {
   flex-direction: column;
   position: relative;
   width: 90%;
-  max-width: 700px;
+  max-width: 400px;
   max-height: 96vh;
   overflow: hidden;
   background-color: $background-color;
