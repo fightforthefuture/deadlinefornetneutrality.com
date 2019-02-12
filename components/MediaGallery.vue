@@ -53,28 +53,30 @@ $item-padding: $gutter * 2;
   <div>
     <section v-for="(gallery, id) in galleries" :key="id" :id="id"
              class="text-center sml-push-y4 med-push-y8">
-      <div class="row">
-        <div class="sml-c12 lrg-c8 grid-center text-center">
-          <h2>{{ gallery.title }}</h2>
-          <p class="sml-push-y2 med-push-y3" v-html="gallery.description"></p>
+      <div class="wrapper">
+        <div class="row">
+          <div class="sml-c12 lrg-c8 grid-center text-center">
+            <h2>{{ gallery.title }}</h2>
+            <p class="sml-push-y2 med-push-y3" v-html="gallery.description"></p>
+          </div> <!-- .c -->
+        </div> <!-- .row -->
 
-          <div class="gallery sml-push-y2">
-            <a v-for="(image, imgId) in visibleImages(gallery)" :key="image" :href="image"
-               target="_blank" class="item flex-center">
-              <label class="truncate">{{ imageLabel(image, gallery.type, imgId+1) }}</label>
-              <img :src="image" :alt="image">
-              <span class="btn btn-sml btn-alt">Download</span>
-            </a>
-          </div>
-
-          <p v-if="preview && !gallery.viewAll" class="sml-push-y1">
-            <a :href="`/media/#${id}`">View all</a>
-          </p>
-          <p v-if="gallery.type === 'external' && gallery.viewAll" class="sml-push-y1">
-            <a :href="gallery.viewAll.url">{{ gallery.viewAll.text }}</a>
-          </p>
+        <div class="gallery sml-push-y2">
+          <a v-for="(image, imgId) in visibleImages(gallery)" :key="image" :href="image"
+             target="_blank" class="item flex-center">
+            <label class="truncate">{{ imageLabel(image, gallery.type, imgId+1) }}</label>
+            <img :src="image" :alt="image">
+            <span class="btn btn-sml btn-alt">Download</span>
+          </a>
         </div>
-      </div>
+
+        <p v-if="preview && !gallery.viewAll" class="sml-push-y1">
+          <a :href="`/media/#${id}`">View all</a>
+        </p>
+        <p v-if="gallery.type === 'external' && gallery.viewAll" class="sml-push-y1">
+          <a :href="gallery.viewAll.url">{{ gallery.viewAll.text }}</a>
+        </p>
+      </div> <!-- .wrapper -->
     </section>
   </div>
 </template>

@@ -16,31 +16,21 @@
         </div> <!-- .wrapper -->
       </section>
     </div> <!-- .site-content -->
-
-    <Modal>
-      <SelfieModal v-if="modalType === 'selfie'" :selfie="modalData"/>
-    </Modal>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 import config from '~/config'
 import { createMetaTags } from '~/assets/js/helpers'
 import { mapState } from 'vuex'
 import PageHeader from '~/components/PageHeader'
 import SelfieGrid from '~/components/SelfieGrid'
-import Modal from '~/components/Modal'
-import SelfieModal from '~/components/SelfieModal'
-import axios from 'axios'
 
 export default {
-  layout: 'skeleton',
-
   components: {
     PageHeader,
-    SelfieGrid,
-    Modal,
-    SelfieModal
+    SelfieGrid
   },
 
   head() {
@@ -68,10 +58,6 @@ export default {
         // failed to load photo
       }
     }
-  },
-
-  computed: {
-    ...mapState(['modalType', 'modalData'])
   }
 }
 </script>

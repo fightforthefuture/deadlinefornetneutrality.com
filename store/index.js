@@ -10,16 +10,21 @@ const createStore = () => {
       dpPetitionId: config.demandProgressPetitionId,
       donateUrl: config.donateUrl,
       letterText: config.letterText,
-      modalVisible: false,
-      modalType: null,
-      modalData: null,
-      mapboxToken: config.mapboxToken,
       countdownEndDateTime: config.countdownEndDateTime,
+      isArchived: config.isArchived,
+      formStep: 1,
+
+      // Modal
+      modalVisible: !!config.isArchived,
+      modalType: config.isArchived ? 'archived' : null,
+      modalData: null,
+
+      // Map
+      mapboxToken: config.mapboxToken,
       map: {
         zoom: null,
         currentPin: null
       },
-      formStep: 1,
 
       // Selfies Feed
       selfies: null,
